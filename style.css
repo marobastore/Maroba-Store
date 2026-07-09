@@ -184,7 +184,7 @@ body {
 
 .product-card {
   position: relative;
-  background: #f3f3f3;
+  background: #eaf8ff;
   border-radius: 14px;
   padding: 13px;
   min-height: 255px;
@@ -291,7 +291,7 @@ body {
 }
 
 .mini-card {
-  background: #f3f3f3;
+  background: #eaf8ff;
   border-radius: 14px;
   padding: 13px;
 }
