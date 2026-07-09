@@ -11,8 +11,8 @@ body {
 }
 
 .page {
-  width: min(1040px, 92%);
-  margin: 55px auto;
+  width: min(1360px, 96%);
+  margin: 35px auto;
   background: #ffffff;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
   overflow: hidden;
