@@ -454,3 +454,10 @@ body {
     width: 100%;
   }
 }
+.product-detail {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  padding: 55px 50px;
+  background: #ffffff;
+}
