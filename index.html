@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Maroba Store | Accesorios para celulares</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,19 +13,30 @@
 
   <main class="page">
 
+    <!-- HEADER -->
     <header class="header">
-      <div class="logo">Maroba<span>Store</span></div>
+      <div class="logo">
+        Maroba<span>Store</span>
+      </div>
 
       <nav class="nav">
-        <a href="#">Inicio</a>
+        <a href="index.html">Inicio</a>
         <a href="#productos">Tienda</a>
         <a href="#recomendados">Recomendados</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="cart" href="#">🛒</a>
+      <a 
+        class="cart" 
+        href="https://wa.me/59164465212" 
+        target="_blank"
+        aria-label="WhatsApp Maroba Store"
+      >
+        🛒
+      </a>
     </header>
 
+    <!-- HERO / BANNER -->
     <section class="hero">
       <div class="hero-bg"></div>
 
@@ -39,14 +52,17 @@
               id="searchInput" 
               placeholder="Buscar en Maroba Store..." 
             />
+
             <button onclick="buscarProducto()">Buscar</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PRODUCTOS -->
     <section class="shop-section" id="productos">
 
+      <!-- CATEGORÍAS -->
       <aside class="sidebar">
         <h3>Categorías</h3>
 
@@ -60,44 +76,32 @@
         </ul>
       </aside>
 
+      <!-- GRILLA DE PRODUCTOS -->
       <div class="products-grid">
 
-        <a href="producto-funda.html" class="product-card product-link">
-  <span class="tag">Fundas</span>
-
-  <img 
-    src="img/funda-negra.jpg" 
-    alt="Funda gamuzada para iPhone"
-  />
-
-  <h3>Funda gamuzada iPhone</h3>
-  <p class="rating">★ 5.0 | Colores disponibles</p>
-
-  <div class="price-row">
-    <strong>Desde Bs 45</strong>
-  </div>
-
-  <div class="buttons">
-    <button type="button">Ver colores</button>
-    <span>Comprar</span>
-  </div>
-</a>
+        <!-- PRODUCTO 1: FUNDA GAMUZADA -->
+        <article class="product-card">
           <span class="tag">Fundas</span>
-          <img 
-            src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=600&auto=format&fit=crop" 
-            alt="Funda para celular"
-          />
-          <h3>Funda MagSafe iPhone</h3>
-          <p class="rating">★ 5.0 | 20 reseñas</p>
 
-          <div class="price-row">
-            <strong>Bs 45</strong>
-          </div>
+          <a href="producto-funda.html" class="product-card-link">
+            <img 
+              src="img/funda-negra.jpg" 
+              alt="Funda gamuzada para iPhone"
+            />
+
+            <h3>Funda gamuzada iPhone</h3>
+            <p class="rating">★ 5.0 | Colores disponibles</p>
+
+            <div class="price-row">
+              <strong>Desde Bs 45</strong>
+            </div>
+          </a>
 
           <div class="buttons">
-            <button>Agregar</button>
+            <a href="producto-funda.html">Ver colores</a>
+
             <a 
-              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20la%20Funda%20MagSafe%20iPhone" 
+              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20una%20Funda%20gamuzada%20para%20iPhone"
               target="_blank"
             >
               Comprar
@@ -105,12 +109,15 @@
           </div>
         </article>
 
+        <!-- PRODUCTO 2: CARGADOR -->
         <article class="product-card">
           <span class="tag">Carga</span>
+
           <img 
             src="https://images.unsplash.com/photo-1618577608401-8f43a5c42b73?q=80&w=600&auto=format&fit=crop" 
             alt="Cargador rápido"
           />
+
           <h3>Cargador rápido 20W</h3>
           <p class="rating">★ 4.8 | 15 reseñas</p>
 
@@ -119,7 +126,8 @@
           </div>
 
           <div class="buttons">
-            <button>Agregar</button>
+            <button type="button">Agregar</button>
+
             <a 
               href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20el%20Cargador%20rápido%2020W" 
               target="_blank"
@@ -129,12 +137,15 @@
           </div>
         </article>
 
+        <!-- PRODUCTO 3: AUDÍFONOS -->
         <article class="product-card">
           <span class="tag">Audio</span>
+
           <img 
             src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?q=80&w=600&auto=format&fit=crop" 
             alt="Audífonos bluetooth"
           />
+
           <h3>Audífonos Bluetooth</h3>
           <p class="rating">★ 4.9 | 30 reseñas</p>
 
@@ -143,7 +154,8 @@
           </div>
 
           <div class="buttons">
-            <button>Agregar</button>
+            <button type="button">Agregar</button>
+
             <a 
               href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20Audífonos%20Bluetooth" 
               target="_blank"
@@ -153,12 +165,15 @@
           </div>
         </article>
 
+        <!-- PRODUCTO 4: PROTECTOR -->
         <article class="product-card">
           <span class="tag">Protección</span>
+
           <img 
             src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" 
             alt="Protector de pantalla"
           />
+
           <h3>Protector de pantalla</h3>
           <p class="rating">★ 5.0 | 18 reseñas</p>
 
@@ -167,57 +182,10 @@
           </div>
 
           <div class="buttons">
-            <button>Agregar</button>
+            <button type="button">Agregar</button>
+
             <a 
               href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20un%20Protector%20de%20pantalla" 
-              target="_blank"
-            >
-              Comprar
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <span class="tag">Soportes</span>
-          <img 
-            src="https://images.unsplash.com/photo-1616410011236-7a42121dd981?q=80&w=600&auto=format&fit=crop" 
-            alt="Soporte para celular"
-          />
-          <h3>Soporte para auto</h3>
-          <p class="rating">★ 4.7 | 12 reseñas</p>
-
-          <div class="price-row">
-            <strong>Bs 55</strong>
-          </div>
-
-          <div class="buttons">
-            <button>Agregar</button>
-            <a 
-              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20un%20Soporte%20para%20auto" 
-              target="_blank"
-            >
-              Comprar
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <span class="tag">Ofertas</span>
-          <img 
-            src="https://images.unsplash.com/photo-1556656793-08538906a9f8?q=80&w=600&auto=format&fit=crop" 
-            alt="Combo accesorios"
-          />
-          <h3>Combo accesorios</h3>
-          <p class="rating">★ 5.0 | 25 reseñas</p>
-
-          <div class="price-row">
-            <strong>Bs 99</strong>
-          </div>
-
-          <div class="buttons">
-            <button>Agregar</button>
-            <a 
-              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20el%20Combo%20de%20accesorios" 
               target="_blank"
             >
               Comprar
@@ -228,6 +196,7 @@
       </div>
     </section>
 
+    <!-- RECOMENDADOS -->
     <section class="recommendations" id="recomendados">
       <div class="section-title">
         <h2>Recomendaciones para ti</h2>
@@ -241,6 +210,7 @@
             src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=600&auto=format&fit=crop" 
             alt="Audífonos Pro"
           />
+
           <h3>Audífonos Pro</h3>
           <strong>Bs 150</strong>
         </div>
@@ -250,6 +220,7 @@
             src="https://images.unsplash.com/photo-1587033411391-5d9e51cce126?q=80&w=600&auto=format&fit=crop" 
             alt="Cable USB-C"
           />
+
           <h3>Cable USB-C</h3>
           <strong>Bs 35</strong>
         </div>
@@ -259,6 +230,7 @@
             src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=600&auto=format&fit=crop" 
             alt="Funda Premium"
           />
+
           <h3>Funda Premium</h3>
           <strong>Bs 60</strong>
         </div>
@@ -266,6 +238,7 @@
       </div>
     </section>
 
+    <!-- NEWSLETTER -->
     <section class="newsletter">
       <div>
         <h2>¿Listo para renovar tus accesorios?</h2>
@@ -278,6 +251,7 @@
       </form>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer" id="contacto">
       <div>
         <h3>Maroba Store</h3>
@@ -300,4 +274,5 @@
 
   <script src="script.js"></script>
 </body>
+</html>
 </html>
