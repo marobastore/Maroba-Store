@@ -251,12 +251,13 @@ body {
   text-decoration: none;
 }
 
-.buttons button {
+.buttons button,
+.buttons a:first-child {
   background: #ffffff;
   color: #111111;
 }
 
-.buttons a {
+.buttons a:last-child {
   background: #111111;
   color: #ffffff;
 }
