@@ -490,14 +490,15 @@ body {
 }
 
 /* Corrección de botones: primero blanco, segundo negro */
-.buttons button:first-child,
-.buttons a:first-child {
-  background: #ffffff;
-  color: #111111;
+/* Corrección final botones Maroba */
+.buttons a:last-child,
+.buttons button:last-child {
+  background: #4ab5d4 !important;
+  color: #ffffff !important;
 }
 
-.buttons button:last-child,
-.buttons a:last-child {
-  background: #111111;
-  color: #ffffff;
+.buttons a:first-child,
+.buttons button:first-child {
+  background: #ffffff !important;
+  color: #111111 !important;
 }
