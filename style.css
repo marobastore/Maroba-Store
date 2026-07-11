@@ -534,3 +534,40 @@ body {
 .verde-agua {
   background: #9fd8d2;
 }
+/* Estilo tipo e-commerce: cards blancas con borde celeste al seleccionar */
+.product-card {
+  background: #ffffff !important;
+  border: 2px solid #eeeeee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.product-card:hover {
+  border-color: #4ab5d4;
+  box-shadow: 0 12px 32px rgba(74, 181, 212, 0.22);
+  transform: translateY(-3px);
+}
+
+.product-card:active {
+  border-color: #4ab5d4;
+  box-shadow: 0 0 0 3px rgba(74, 181, 212, 0.25);
+}
+
+/* Fondo interno de productos en blanco */
+.product-card img {
+  background: #ffffff;
+}
+
+/* Cards de recomendaciones también en blanco */
+.mini-card {
+  background: #ffffff !important;
+  border: 2px solid #eeeeee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.mini-card:hover {
+  border-color: #4ab5d4;
+  box-shadow: 0 12px 32px rgba(74, 181, 212, 0.22);
+  transform: translateY(-3px);
+}
