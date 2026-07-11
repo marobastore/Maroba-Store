@@ -502,3 +502,35 @@ body {
   background: #ffffff !important;
   color: #111111 !important;
 }
+/* Colores nuevos para Funda de silicona 17 Pro */
+.blanco {
+  background: #ffffff;
+}
+
+.marfil {
+  background: #f5ead6;
+}
+
+.azul-marino {
+  background: #0b2748;
+}
+
+.indigo {
+  background: #23395d;
+}
+
+.vino {
+  background: #6d0f1f;
+}
+
+.ciruela-profundo {
+  background: #4b1026;
+}
+
+.palo-rosa {
+  background: #d9a6a6;
+}
+
+.verde-agua {
+  background: #9fd8d2;
+}
