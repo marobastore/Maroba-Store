@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Funda de silicona 17 Pro | Maroba Store</title>
-
+  <title>Funda de silicona iPhone 17 Pro Max | Maroba Store</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
   <main class="page">
@@ -36,128 +33,168 @@
       </a>
     </header>
 
-    <!-- DETALLE DEL PRODUCTO -->
-    <section class="product-detail">
+    <!-- DETALLE PRODUCTO -->
+    <section class="amazon-product-detail">
 
-      <!-- GALERÍA -->
-      <div class="product-gallery">
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="amazon-gallery">
 
-        <div class="main-product-image">
-          <img 
-            id="mainProductImage" 
-            src="img/silicona-17pro-blanco.jpg" 
-            alt="Funda de silicona 17 Pro color blanco"
-          />
-        </div>
-
-        <div class="thumbnail-row">
-
-          <button onclick="cambiarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg')" class="thumb active">
+        <div class="amazon-thumbs">
+          <button class="amazon-thumb active"
+            onclick="cambiarProductoSiliconaMax('Blanco', 'img/silicona-17pro-blanco.jpg', this)">
             <img src="img/silicona-17pro-blanco.jpg" alt="Blanco">
           </button>
 
-          <button onclick="cambiarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg')" class="thumb">
+          <button class="amazon-thumb"
+            onclick="cambiarProductoSiliconaMax('Marfil', 'img/silicona-17pro-marfil.jpg', this)">
             <img src="img/silicona-17pro-marfil.jpg" alt="Marfil">
           </button>
 
-          <button onclick="cambiarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg')" class="thumb">
+          <button class="amazon-thumb"
+            onclick="cambiarProductoSiliconaMax('Negro', 'img/silicona-17pro-negro.jpg', this)">
             <img src="img/silicona-17pro-negro.jpg" alt="Negro">
           </button>
 
-          <button onclick="cambiarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg')" class="thumb">
+          <button class="amazon-thumb"
+            onclick="cambiarProductoSiliconaMax('Azul marino', 'img/silicona-17pro-azul-marino.jpg', this)">
             <img src="img/silicona-17pro-azul-marino.jpg" alt="Azul marino">
           </button>
 
-          <button onclick="cambiarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg')" class="thumb">
+          <button class="amazon-thumb"
+            onclick="cambiarProductoSiliconaMax('Índigo', 'img/silicona-17pro-indigo.jpg', this)">
             <img src="img/silicona-17pro-indigo.jpg" alt="Índigo">
           </button>
+        </div>
 
-          <button onclick="cambiarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg')" class="thumb">
-            <img src="img/silicona-17pro-vino.jpg" alt="Vino">
-          </button>
-
-          <button onclick="cambiarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg')" class="thumb">
-            <img src="img/silicona-17pro-ciruela-profundo.jpg" alt="Ciruela profundo">
-          </button>
-
-          <button onclick="cambiarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg')" class="thumb">
-            <img src="img/silicona-17pro-morado.jpg" alt="Morado">
-          </button>
-
-          <button onclick="cambiarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg')" class="thumb">
-            <img src="img/silicona-17pro-lila.jpg" alt="Lila">
-          </button>
-
-          <button onclick="cambiarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg')" class="thumb">
-            <img src="img/silicona-17pro-palo-rosa.jpg" alt="Palo rosa">
-          </button>
-
-          <button onclick="cambiarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg')" class="thumb">
-            <img src="img/silicona-17pro-verde-agua.jpg" alt="Verde agua">
-          </button>
-
+        <div class="amazon-main-image">
+          <img 
+            id="mainProductImage"
+            src="img/silicona-17pro-blanco.jpg"
+            alt="Funda de silicona color blanco"
+          />
         </div>
       </div>
 
-      <!-- INFORMACIÓN -->
-      <div class="product-info-detail">
+      <!-- COLUMNA DERECHA -->
+      <div class="amazon-info">
 
-        <span class="detail-tag">Fundas</span>
+        <h1 class="amazon-title">
+          Funda de silicona Apple para iPhone 17 Pro Max con MagSafe y control de cámara
+        </h1>
 
-        <h1>Funda de silicona 17 Pro</h1>
-
-        <p class="detail-description">
-          Funda de silicona suave al tacto, elegante y resistente. Ideal para proteger tu iPhone 17 Pro con estilo.
+        <p class="amazon-subtitle">
+          Funda ligera para teléfono, compatible con carga inalámbrica, acabado suave y elegante.
         </p>
 
-        <div class="detail-block">
-          <h3>Modelo disponible</h3>
-          <p>iPhone 17 Pro</p>
+        <div class="amazon-rating">
+          ★ 4.9 | Producto destacado
         </div>
 
-        <div class="detail-block">
-          <h3>Color seleccionado</h3>
-          <p id="selectedColor">Blanco</p>
+        <div class="amazon-price-box">
+          <span class="amazon-price-label">Precio:</span>
+          <strong class="amazon-price">Bs 50</strong>
         </div>
 
-        <div class="detail-block">
-          <h3>Colores disponibles</h3>
+        <!-- COLOR DEL IPHONE -->
+        <div class="selector-block">
+          <h3>Color de tu iPhone 17 Pro Max: <span id="selectedPhoneColor">Plata / Gris</span></h3>
 
-          <div class="color-options">
-            <button class="color-dot blanco active" onclick="cambiarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg')" title="Blanco"></button>
-            <button class="color-dot marfil" onclick="cambiarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg')" title="Marfil"></button>
-            <button class="color-dot negro" onclick="cambiarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg')" title="Negro"></button>
-            <button class="color-dot azul-marino" onclick="cambiarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg')" title="Azul marino"></button>
-            <button class="color-dot indigo" onclick="cambiarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg')" title="Índigo"></button>
-            <button class="color-dot vino" onclick="cambiarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg')" title="Vino"></button>
-            <button class="color-dot ciruela-profundo" onclick="cambiarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg')" title="Ciruela profundo"></button>
-            <button class="color-dot morado" onclick="cambiarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg')" title="Morado"></button>
-            <button class="color-dot lila" onclick="cambiarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg')" title="Lila"></button>
-            <button class="color-dot palo-rosa" onclick="cambiarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg')" title="Palo rosa"></button>
-            <button class="color-dot verde-agua" onclick="cambiarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg')" title="Verde agua"></button>
+          <div class="swatch-row">
+            <button class="phone-swatch plata-gris active"
+              onclick="seleccionarColorIphone('Plata / Gris', this)"
+              title="Plata / Gris">
+            </button>
+
+            <button class="phone-swatch naranja-iphone"
+              onclick="seleccionarColorIphone('Naranja', this)"
+              title="Naranja">
+            </button>
+
+            <button class="phone-swatch azul-iphone"
+              onclick="seleccionarColorIphone('Azul', this)"
+              title="Azul">
+            </button>
           </div>
         </div>
 
-        <div class="detail-price">
-          <span>Precio</span>
-          <strong>Bs 50</strong>
+        <!-- COLOR DE LA FUNDA -->
+        <div class="selector-block">
+          <h3>Color de funda: <span id="selectedColor">Blanco</span></h3>
+
+          <div class="swatch-row">
+            <button class="color-dot blanco active"
+              onmouseenter="previewProductoSiliconaMax('Blanco', 'img/silicona-17pro-blanco.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Blanco', 'img/silicona-17pro-blanco.jpg', this)"
+              title="Blanco"></button>
+
+            <button class="color-dot marfil"
+              onmouseenter="previewProductoSiliconaMax('Marfil', 'img/silicona-17pro-marfil.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Marfil', 'img/silicona-17pro-marfil.jpg', this)"
+              title="Marfil"></button>
+
+            <button class="color-dot negro"
+              onmouseenter="previewProductoSiliconaMax('Negro', 'img/silicona-17pro-negro.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Negro', 'img/silicona-17pro-negro.jpg', this)"
+              title="Negro"></button>
+
+            <button class="color-dot azul-marino"
+              onmouseenter="previewProductoSiliconaMax('Azul marino', 'img/silicona-17pro-azul-marino.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Azul marino', 'img/silicona-17pro-azul-marino.jpg', this)"
+              title="Azul marino"></button>
+
+            <button class="color-dot indigo"
+              onmouseenter="previewProductoSiliconaMax('Índigo', 'img/silicona-17pro-indigo.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Índigo', 'img/silicona-17pro-indigo.jpg', this)"
+              title="Índigo"></button>
+
+            <button class="color-dot vino"
+              onmouseenter="previewProductoSiliconaMax('Vino', 'img/silicona-17pro-vino.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Vino', 'img/silicona-17pro-vino.jpg', this)"
+              title="Vino"></button>
+
+            <button class="color-dot ciruela-profundo"
+              onmouseenter="previewProductoSiliconaMax('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg', this)"
+              title="Ciruela profundo"></button>
+
+            <button class="color-dot morado"
+              onmouseenter="previewProductoSiliconaMax('Morado', 'img/silicona-17pro-morado.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Morado', 'img/silicona-17pro-morado.jpg', this)"
+              title="Morado"></button>
+
+            <button class="color-dot lila"
+              onmouseenter="previewProductoSiliconaMax('Lila', 'img/silicona-17pro-lila.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Lila', 'img/silicona-17pro-lila.jpg', this)"
+              title="Lila"></button>
+
+            <button class="color-dot palo-rosa"
+              onmouseenter="previewProductoSiliconaMax('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg', this)"
+              title="Palo rosa"></button>
+
+            <button class="color-dot verde-agua"
+              onmouseenter="previewProductoSiliconaMax('Verde agua', 'img/silicona-17pro-verde-agua.jpg', this)"
+              onclick="fijarProductoSiliconaMax('Verde agua', 'img/silicona-17pro-verde-agua.jpg', this)"
+              title="Verde agua"></button>
+          </div>
         </div>
 
-        <a 
-          id="whatsappButton"
-          class="whatsapp-buy"
-          href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20la%20Funda%20de%20silicona%2017%20Pro%20en%20color%20Blanco"
-          target="_blank"
-        >
-          Comprar por WhatsApp
-        </a>
+        <div class="product-action-box">
+          <a 
+            id="whatsappButton"
+            class="buy-button"
+            href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20la%20Funda%20de%20silicona%20para%20iPhone%2017%20Pro%20Max,%20color%20de%20funda%20Blanco,%20color%20de%20iPhone%20Plata%20/%20Gris"
+            target="_blank"
+          >
+            Comprar por WhatsApp
+          </a>
 
-        <a href="index.html#productos" class="back-link">
-          ← Volver a productos
-        </a>
+          <a href="index.html#productos" class="back-link">
+            ← Volver a productos
+          </a>
+        </div>
 
       </div>
-
     </section>
 
   </main>
