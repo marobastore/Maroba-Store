@@ -571,3 +571,68 @@ body {
   box-shadow: 0 12px 32px rgba(74, 181, 212, 0.22);
   transform: translateY(-3px);
 }
+/* Ajuste de grilla: 4 productos por fila en computadora */
+.products-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 18px;
+}
+
+/* Tarjetas más verticales y compactas */
+.product-card {
+  min-height: 300px;
+  padding: 14px;
+}
+
+/* Imagen más proporcionada dentro de la tarjeta */
+.product-card img,
+.product-card-link img {
+  height: 150px !important;
+  object-fit: contain;
+  margin: 18px auto 14px;
+}
+
+/* Texto más compacto para que no rompa la tarjeta */
+.product-card h3,
+.product-card-link h3 {
+  font-size: 14px;
+  line-height: 1.25;
+  min-height: 36px;
+}
+
+/* Precio alineado */
+.price-row {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+/* Botones más compactos */
+.buttons {
+  gap: 8px;
+}
+
+.buttons button,
+.buttons a {
+  padding: 10px 8px;
+  font-size: 10px;
+}
+
+/* En tablets: 3 por fila */
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* En celular: 2 por fila */
+@media (max-width: 700px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* En celular pequeño: 1 por fila */
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
