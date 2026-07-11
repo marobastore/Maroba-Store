@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Funda de silicona 17 Pro | Maroba Store</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        Maroba<span>Store</span>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#productos">Tienda</a>
+        <a href="index.html#recomendados">Recomendados</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <a 
+        class="cart" 
+        href="https://wa.me/59164465212" 
+        target="_blank"
+        aria-label="WhatsApp Maroba Store"
+      >
+        🛒
+      </a>
+    </header>
+
+    <!-- DETALLE DEL PRODUCTO -->
+    <section class="product-detail">
+
+      <!-- GALERÍA -->
+      <div class="product-gallery">
+
+        <div class="main-product-image">
+          <img 
+            id="mainProductImage" 
+            src="img/silicona-17pro-blanco.jpg" 
+            alt="Funda de silicona 17 Pro color blanco"
+          />
+        </div>
+
+        <div class="thumbnail-row">
+
+          <button onclick="cambiarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg')" class="thumb active">
+            <img src="img/silicona-17pro-blanco.jpg" alt="Blanco">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg')" class="thumb">
+            <img src="img/silicona-17pro-marfil.jpg" alt="Marfil">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg')" class="thumb">
+            <img src="img/silicona-17pro-negro.jpg" alt="Negro">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg')" class="thumb">
+            <img src="img/silicona-17pro-azul-marino.jpg" alt="Azul marino">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg')" class="thumb">
+            <img src="img/silicona-17pro-indigo.jpg" alt="Índigo">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg')" class="thumb">
+            <img src="img/silicona-17pro-vino.jpg" alt="Vino">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg')" class="thumb">
+            <img src="img/silicona-17pro-ciruela-profundo.jpg" alt="Ciruela profundo">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg')" class="thumb">
+            <img src="img/silicona-17pro-morado.jpg" alt="Morado">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg')" class="thumb">
+            <img src="img/silicona-17pro-lila.jpg" alt="Lila">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg')" class="thumb">
+            <img src="img/silicona-17pro-palo-rosa.jpg" alt="Palo rosa">
+          </button>
+
+          <button onclick="cambiarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg')" class="thumb">
+            <img src="img/silicona-17pro-verde-agua.jpg" alt="Verde agua">
+          </button>
+
+        </div>
+      </div>
+
+      <!-- INFORMACIÓN -->
+      <div class="product-info-detail">
+
+        <span class="detail-tag">Fundas</span>
+
+        <h1>Funda de silicona 17 Pro</h1>
+
+        <p class="detail-description">
+          Funda de silicona suave al tacto, elegante y resistente. Ideal para proteger tu iPhone 17 Pro con estilo.
+        </p>
+
+        <div class="detail-block">
+          <h3>Modelo disponible</h3>
+          <p>iPhone 17 Pro</p>
+        </div>
+
+        <div class="detail-block">
+          <h3>Color seleccionado</h3>
+          <p id="selectedColor">Blanco</p>
+        </div>
+
+        <div class="detail-block">
+          <h3>Colores disponibles</h3>
+
+          <div class="color-options">
+            <button class="color-dot blanco active" onclick="cambiarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg')" title="Blanco"></button>
+            <button class="color-dot marfil" onclick="cambiarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg')" title="Marfil"></button>
+            <button class="color-dot negro" onclick="cambiarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg')" title="Negro"></button>
+            <button class="color-dot azul-marino" onclick="cambiarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg')" title="Azul marino"></button>
+            <button class="color-dot indigo" onclick="cambiarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg')" title="Índigo"></button>
+            <button class="color-dot vino" onclick="cambiarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg')" title="Vino"></button>
+            <button class="color-dot ciruela-profundo" onclick="cambiarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg')" title="Ciruela profundo"></button>
+            <button class="color-dot morado" onclick="cambiarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg')" title="Morado"></button>
+            <button class="color-dot lila" onclick="cambiarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg')" title="Lila"></button>
+            <button class="color-dot palo-rosa" onclick="cambiarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg')" title="Palo rosa"></button>
+            <button class="color-dot verde-agua" onclick="cambiarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg')" title="Verde agua"></button>
+          </div>
+        </div>
+
+        <div class="detail-price">
+          <span>Precio</span>
+          <strong>Bs 50</strong>
+        </div>
+
+        <a 
+          id="whatsappButton"
+          class="whatsapp-buy"
+          href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20la%20Funda%20de%20silicona%2017%20Pro%20en%20color%20Blanco"
+          target="_blank"
+        >
+          Comprar por WhatsApp
+        </a>
+
+        <a href="index.html#productos" class="back-link">
+          ← Volver a productos
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
