@@ -258,11 +258,16 @@
     class="delivery-card active"
     onclick="seleccionarEntrega('Entrega disponible', this)"
   >
-    <img 
-      src="img/transporte.svg" 
-      alt="Entrega disponible" 
-      class="delivery-img-icon"
-    >
+    <svg class="delivery-svg" viewBox="0 0 64 64" fill="none">
+      <path d="M8 18H39V42H8V18Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M39 27H50L58 34V42H39V27Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M15 47C18.3137 47 21 44.3137 21 41C21 37.6863 18.3137 35 15 35C11.6863 35 9 37.6863 9 41C9 44.3137 11.6863 47 15 47Z" stroke="currentColor" stroke-width="3"/>
+      <path d="M48 47C51.3137 47 54 44.3137 54 41C54 37.6863 51.3137 35 48 35C44.6863 35 42 37.6863 42 41C42 44.3137 44.6863 47 48 47Z" stroke="currentColor" stroke-width="3"/>
+      <path d="M21 41H42" stroke="currentColor" stroke-width="3"/>
+      <path d="M14 25H31" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <path d="M14 31H27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+
     <span>Entrega disponible</span>
   </button>
 
@@ -271,11 +276,15 @@
     class="delivery-card"
     onclick="seleccionarEntrega('Retiro en tienda', this)"
   >
-    <img 
-      src="img/tienda.svg" 
-      alt="Retiro en tienda" 
-      class="delivery-img-icon"
-    >
+    <svg class="delivery-svg store-svg" viewBox="0 0 64 64" fill="none">
+      <path d="M12 28H52V54H12V28Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M10 28L15 12H49L54 28H10Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M22 54V38H42V54" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M18 12V28" stroke="currentColor" stroke-width="3"/>
+      <path d="M32 12V28" stroke="currentColor" stroke-width="3"/>
+      <path d="M46 12V28" stroke="currentColor" stroke-width="3"/>
+    </svg>
+
     <span>Retiro en tienda</span>
   </button>
 
