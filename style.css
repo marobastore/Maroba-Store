@@ -990,3 +990,37 @@ body {
     width: 100% !important;
   }
 }
+/* Iconos SVG personalizados para entrega */
+.delivery-img-icon {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.delivery-card {
+  min-height: 74px !important;
+  border: 2px solid #e1e1e1 !important;
+  background: #ffffff !important;
+  border-radius: 2px !important;
+  padding: 14px 18px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  color: #111111 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+.delivery-card.active {
+  border-color: #4ab5d4 !important;
+}
+
+.delivery-card:hover {
+  border-color: #4ab5d4 !important;
+  box-shadow: 0 5px 18px rgba(74, 181, 212, 0.16) !important;
+  transform: translateY(-1px);
+}
