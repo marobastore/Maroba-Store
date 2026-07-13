@@ -43,40 +43,42 @@
       <div class="amazon-gallery">
 
         <div class="amazon-thumbs">
+
           <button 
             class="amazon-thumb active"
             onclick="fijarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg', this)"
           >
-            <img src="img/silicona-17pro-blanco.jpg" alt="Blanco">
+            <img src="img/silicona-17pro-blanco.jpg" alt="Funda blanca">
           </button>
 
           <button 
             class="amazon-thumb"
             onclick="fijarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg', this)"
           >
-            <img src="img/silicona-17pro-marfil.jpg" alt="Marfil">
+            <img src="img/silicona-17pro-marfil.jpg" alt="Funda marfil">
           </button>
 
           <button 
             class="amazon-thumb"
             onclick="fijarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg', this)"
           >
-            <img src="img/silicona-17pro-negro.jpg" alt="Negro">
+            <img src="img/silicona-17pro-negro.jpg" alt="Funda negra">
           </button>
 
           <button 
             class="amazon-thumb"
             onclick="fijarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg', this)"
           >
-            <img src="img/silicona-17pro-azul-marino.jpg" alt="Azul marino">
+            <img src="img/silicona-17pro-azul-marino.jpg" alt="Funda azul marino">
           </button>
 
           <button 
             class="amazon-thumb"
             onclick="fijarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg', this)"
           >
-            <img src="img/silicona-17pro-indigo.jpg" alt="Índigo">
+            <img src="img/silicona-17pro-indigo.jpg" alt="Funda índigo">
           </button>
+
         </div>
 
         <div class="amazon-main-image">
@@ -250,45 +252,59 @@
           <small>Disponible</small>
         </div>
 
-       <!-- MÉTODO DE ENTREGA -->
-<div class="delivery-options">
+        <!-- MÉTODO DE ENTREGA -->
+        <div class="delivery-options">
 
-  <button 
-    type="button" 
-    class="delivery-card active"
-    onclick="seleccionarEntrega('Entrega disponible', this)"
-  >
-    <svg class="delivery-svg" viewBox="0 0 64 64" fill="none">
-      <path d="M8 18H39V42H8V18Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M39 27H50L58 34V42H39V27Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M15 47C18.3137 47 21 44.3137 21 41C21 37.6863 18.3137 35 15 35C11.6863 35 9 37.6863 9 41C9 44.3137 11.6863 47 15 47Z" stroke="currentColor" stroke-width="3"/>
-      <path d="M48 47C51.3137 47 54 44.3137 54 41C54 37.6863 51.3137 35 48 35C44.6863 35 42 37.6863 42 41C42 44.3137 44.6863 47 48 47Z" stroke="currentColor" stroke-width="3"/>
-      <path d="M21 41H42" stroke="currentColor" stroke-width="3"/>
-      <path d="M14 25H31" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <path d="M14 31H27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    </svg>
+          <button 
+            type="button" 
+            class="delivery-card active"
+            onclick="seleccionarEntrega('Entrega disponible', this)"
+          >
+            <img 
+              src="img/transporte.svg" 
+              alt="Entrega disponible" 
+              class="delivery-img-icon"
+            >
+            <span>Entrega disponible</span>
+          </button>
 
-    <span>Entrega disponible</span>
-  </button>
+          <button 
+            type="button" 
+            class="delivery-card"
+            onclick="seleccionarEntrega('Retiro en tienda', this)"
+          >
+            <img 
+              src="img/tienda.svg" 
+              alt="Retiro en tienda" 
+              class="delivery-img-icon"
+            >
+            <span>Retiro en tienda</span>
+          </button>
 
-  <button 
-    type="button" 
-    class="delivery-card"
-    onclick="seleccionarEntrega('Retiro en tienda', this)"
-  >
-    <svg class="delivery-svg store-svg" viewBox="0 0 64 64" fill="none">
-      <path d="M12 28H52V54H12V28Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M10 28L15 12H49L54 28H10Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M22 54V38H42V54" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M18 12V28" stroke="currentColor" stroke-width="3"/>
-      <path d="M32 12V28" stroke="currentColor" stroke-width="3"/>
-      <path d="M46 12V28" stroke="currentColor" stroke-width="3"/>
-    </svg>
+        </div>
 
-    <span>Retiro en tienda</span>
-  </button>
+        <!-- BOTONES -->
+        <div class="product-action-box">
 
-</div>
+          <button 
+            type="button" 
+            class="add-cart-button"
+            onclick="agregarCarritoSilicona()"
+          >
+            <span class="button-icon">🛒</span>
+            Añadir al carrito
+          </button>
+
+          <button 
+            type="button" 
+            class="buy-button"
+            onclick="comprarAhoraSilicona()"
+          >
+            <span class="button-icon">🛒</span>
+            Compra ahora
+          </button>
+
+        </div>
 
         <a href="index.html#productos" class="back-link">
           ← Volver a productos
