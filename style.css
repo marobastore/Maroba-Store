@@ -1141,3 +1141,23 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+/* ===== ICONOS INTERNOS DE ENTREGA ===== */
+
+.delivery-svg {
+  width: 34px !important;
+  height: 34px !important;
+  color: #126dff !important;
+  display: block !important;
+}
+
+.store-svg {
+  color: #111111 !important;
+}
+
+.delivery-card.active .delivery-svg {
+  color: #126dff !important;
+}
+
+.delivery-card:hover .delivery-svg {
+  color: #126dff !important;
+}
