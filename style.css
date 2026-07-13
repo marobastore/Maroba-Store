@@ -1024,3 +1024,120 @@ body {
   box-shadow: 0 5px 18px rgba(74, 181, 212, 0.16) !important;
   transform: translateY(-1px);
 }
+/* ===== CORRECCIÓN FINAL: ENTREGA + BOTONES EN FILA ===== */
+
+.delivery-options {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 28px !important;
+  margin: 28px 0 34px !important;
+}
+
+.delivery-card {
+  min-height: 88px !important;
+  border: 2px solid #e1e1e1 !important;
+  background: #ffffff !important;
+  border-radius: 2px !important;
+  padding: 14px 18px !important;
+  cursor: pointer !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+
+  color: #111111 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.delivery-card.active {
+  border-color: #4ab5d4 !important;
+  box-shadow: none !important;
+}
+
+.delivery-card:hover {
+  border-color: #4ab5d4 !important;
+  box-shadow: 0 5px 18px rgba(74, 181, 212, 0.16) !important;
+  transform: translateY(-1px) !important;
+}
+
+.delivery-img-icon {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Botones de compra en una sola fila */
+.product-action-box {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+  margin-top: 18px !important;
+  width: 100% !important;
+}
+
+.add-cart-button,
+.buy-button {
+  width: 100% !important;
+  min-width: 0 !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 15px 18px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.add-cart-button {
+  background: #dceaff !important;
+  color: #126dff !important;
+}
+
+.add-cart-button:hover {
+  background: #c7ddff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(18, 109, 255, 0.16) !important;
+}
+
+.buy-button {
+  background: #126dff !important;
+  color: #ffffff !important;
+}
+
+.buy-button:hover {
+  background: #005bea !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(18, 109, 255, 0.28) !important;
+}
+
+.button-icon {
+  font-size: 14px !important;
+  line-height: 1 !important;
+}
+
+/* En celular sí se pueden apilar */
+@media (max-width: 600px) {
+  .delivery-options {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .product-action-box {
+    grid-template-columns: 1fr !important;
+  }
+}
