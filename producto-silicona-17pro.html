@@ -250,49 +250,70 @@
           <small>Disponible</small>
         </div>
 
-        <!-- MÉTODO DE ENTREGA -->
-        <div class="delivery-options">
+       <!-- MÉTODO DE ENTREGA -->
+<div class="delivery-options">
 
-          <button 
-            type="button" 
-            class="delivery-card active"
-            onclick="seleccionarEntrega('Entrega a domicilio', this)"
-          >
-            <span class="delivery-icon">🚚</span>
-            <span>Entrega a domicilio</span>
-          </button>
+  <button 
+    type="button" 
+    class="delivery-card active"
+    onclick="seleccionarEntrega('Entrega disponible', this)"
+  >
+    <svg class="delivery-svg" viewBox="0 0 24 24" fill="none">
+      <path d="M3 7h11v9H3V7Z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M14 10h4l3 3v3h-7v-6Z" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="1.8"/>
+    </svg>
+    <span>Entrega disponible</span>
+  </button>
 
-          <button 
-            type="button" 
-            class="delivery-card"
-            onclick="seleccionarEntrega('Retiro en tienda', this)"
-          >
-            <span class="delivery-icon">🏬</span>
-            <span>Retiro en tienda</span>
-          </button>
+  <button 
+    type="button" 
+    class="delivery-card"
+    onclick="seleccionarEntrega('Retiro en tienda', this)"
+  >
+    <svg class="delivery-svg store-icon" viewBox="0 0 24 24" fill="none">
+      <path d="M4 10h16v10H4V10Z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3 10l2-5h14l2 5H3Z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 20v-6h8v6" stroke="currentColor" stroke-width="1.8"/>
+    </svg>
+    <span>Retiro en tienda</span>
+  </button>
 
-        </div>
+</div>
 
-        <!-- BOTONES -->
-        <div class="product-action-box">
+<!-- BOTONES -->
+<div class="product-action-box">
 
-          <button 
-            type="button" 
-            class="add-cart-button"
-            onclick="agregarCarritoSilicona()"
-          >
-            Agregar al carrito
-          </button>
+  <button 
+    type="button" 
+    class="add-cart-button"
+    onclick="agregarCarritoSilicona()"
+  >
+    <svg class="button-svg" viewBox="0 0 24 24" fill="none">
+      <path d="M6 7h15l-2 8H8L6 7Z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M6 7 5 4H2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+      <circle cx="18" cy="19" r="1.5" fill="currentColor"/>
+    </svg>
+    Añadir al carrito
+  </button>
 
-          <button 
-            type="button" 
-            class="buy-button"
-            onclick="comprarAhoraSilicona()"
-          >
-            Comprar ahora
-          </button>
+  <button 
+    type="button" 
+    class="buy-button"
+    onclick="comprarAhoraSilicona()"
+  >
+    <svg class="button-svg" viewBox="0 0 24 24" fill="none">
+      <path d="M6 7h15l-2 8H8L6 7Z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M6 7 5 4H2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+      <circle cx="18" cy="19" r="1.5" fill="currentColor"/>
+    </svg>
+    Compra ahora
+  </button>
 
-        </div>
+</div>
 
         <a href="index.html#productos" class="back-link">
           ← Volver a productos
