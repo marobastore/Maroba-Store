@@ -876,3 +876,117 @@ body {
   border-color: #4ab5d4 !important;
   box-shadow: 0 0 0 3px rgba(74, 181, 212, 0.22) !important;
 }
+/* ===== ENTREGA Y BOTONES ESTILO E-COMMERCE ===== */
+
+.delivery-options {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 28px !important;
+  margin: 22px 0 26px !important;
+}
+
+.delivery-card {
+  min-height: 74px !important;
+  border: 2px solid #e1e1e1 !important;
+  background: #ffffff !important;
+  border-radius: 2px !important;
+  padding: 14px 18px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  color: #111111 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.delivery-card.active {
+  border-color: #4ab5d4 !important;
+  box-shadow: none !important;
+}
+
+.delivery-card:hover {
+  border-color: #4ab5d4 !important;
+  box-shadow: 0 5px 18px rgba(74, 181, 212, 0.16) !important;
+  transform: translateY(-1px);
+}
+
+.delivery-svg {
+  width: 31px;
+  height: 31px;
+  color: #126dff;
+}
+
+.store-icon {
+  color: #111111;
+}
+
+.product-action-box {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-top: 18px !important;
+}
+
+.add-cart-button,
+.buy-button {
+  min-width: 168px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 15px 22px !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-cart-button {
+  background: #dceaff !important;
+  color: #126dff !important;
+}
+
+.add-cart-button:hover {
+  background: #c7ddff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(18, 109, 255, 0.16);
+}
+
+.buy-button {
+  background: #126dff !important;
+  color: #ffffff !important;
+}
+
+.buy-button:hover {
+  background: #005bea !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(18, 109, 255, 0.28);
+}
+
+.button-svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 700px) {
+  .delivery-options {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .product-action-box {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .add-cart-button,
+  .buy-button {
+    width: 100% !important;
+  }
+}
