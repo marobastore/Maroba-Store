@@ -829,3 +829,50 @@ body {
     min-height: 420px;
   }
 }
+/* Corrección: imágenes de colores del iPhone en tamaño pequeño */
+.phone-model-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 12px;
+}
+
+.phone-model-grid .phone-swatch {
+  width: 110px !important;
+  height: 135px !important;
+  min-height: 135px !important;
+  border-radius: 12px !important;
+  border: 2px solid #dddddd !important;
+  background: #ffffff !important;
+  padding: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+.phone-model-grid .phone-swatch img {
+  width: 70px !important;
+  height: 70px !important;
+  max-width: 70px !important;
+  max-height: 70px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.phone-model-grid .phone-swatch-name {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #111111 !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  margin-top: 8px !important;
+}
+
+.phone-model-grid .phone-swatch.active,
+.phone-model-grid .phone-swatch:hover {
+  border-color: #4ab5d4 !important;
+  box-shadow: 0 0 0 3px rgba(74, 181, 212, 0.22) !important;
+}
