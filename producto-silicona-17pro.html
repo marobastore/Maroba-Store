@@ -258,12 +258,11 @@
     class="delivery-card active"
     onclick="seleccionarEntrega('Entrega disponible', this)"
   >
-    <svg class="delivery-svg" viewBox="0 0 24 24" fill="none">
-      <path d="M3 7h11v9H3V7Z" stroke="currentColor" stroke-width="1.8"/>
-      <path d="M14 10h4l3 3v3h-7v-6Z" stroke="currentColor" stroke-width="1.8"/>
-      <circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.8"/>
-      <circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="1.8"/>
-    </svg>
+    <img 
+      src="img/transporte.svg" 
+      alt="Entrega disponible" 
+      class="delivery-img-icon"
+    >
     <span>Entrega disponible</span>
   </button>
 
@@ -272,16 +271,15 @@
     class="delivery-card"
     onclick="seleccionarEntrega('Retiro en tienda', this)"
   >
-    <svg class="delivery-svg store-icon" viewBox="0 0 24 24" fill="none">
-      <path d="M4 10h16v10H4V10Z" stroke="currentColor" stroke-width="1.8"/>
-      <path d="M3 10l2-5h14l2 5H3Z" stroke="currentColor" stroke-width="1.8"/>
-      <path d="M8 20v-6h8v6" stroke="currentColor" stroke-width="1.8"/>
-    </svg>
+    <img 
+      src="img/tienda.svg" 
+      alt="Retiro en tienda" 
+      class="delivery-img-icon"
+    >
     <span>Retiro en tienda</span>
   </button>
 
 </div>
-
 <!-- BOTONES -->
 <div class="product-action-box">
 
