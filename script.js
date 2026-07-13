@@ -1,5 +1,12 @@
+/* =========================
+   BUSCADOR GENERAL
+========================= */
+
 function buscarProducto() {
   const input = document.getElementById("searchInput");
+
+  if (!input) return;
+
   const texto = input.value.trim();
 
   if (texto === "") {
@@ -8,14 +15,21 @@ function buscarProducto() {
     alert("Buscando: " + texto);
   }
 }
-function cambiarProductoSilicona(nombreColor, imagen) {
+
+
+/* =========================
+   FUNDA GAMUZADA
+   producto-funda.html
+========================= */
+
+function cambiarColor(nombreColor, imagen) {
   const mainImage = document.getElementById("mainProductImage");
   const selectedColor = document.getElementById("selectedColor");
   const whatsappButton = document.getElementById("whatsappButton");
 
   if (mainImage) {
     mainImage.src = imagen;
-    mainImage.alt = "Funda de silicona 17 Pro color " + nombreColor;
+    mainImage.alt = "Funda gamuzada color " + nombreColor;
   }
 
   if (selectedColor) {
@@ -23,7 +37,7 @@ function cambiarProductoSilicona(nombreColor, imagen) {
   }
 
   if (whatsappButton) {
-    const mensaje = `Hola, quiero comprar la Funda de silicona 17 Pro en color ${nombreColor}`;
+    const mensaje = `Hola, quiero comprar la Funda gamuzada para iPhone en color ${nombreColor}`;
     whatsappButton.href = `https://wa.me/59164465212?text=${encodeURIComponent(mensaje)}`;
   }
 
@@ -49,6 +63,13 @@ function cambiarProductoSilicona(nombreColor, imagen) {
     }
   });
 }
+
+
+/* =========================
+   FUNDA SILICONA 17 PRO
+   producto-silicona-17pro.html
+========================= */
+
 let colorFundaSeleccionado = "Blanco";
 let colorIphoneSeleccionado = "Plata / Gris";
 
@@ -56,7 +77,7 @@ function actualizarWhatsappSiliconaMax() {
   const whatsappButton = document.getElementById("whatsappButton");
 
   if (whatsappButton) {
-    const mensaje = `Hola, quiero comprar la Funda de silicona para iPhone 17 Pro Max, color de funda ${colorFundaSeleccionado}, color de iPhone ${colorIphoneSeleccionado}`;
+    const mensaje = `Hola, quiero comprar la Funda de silicona para iPhone 17 Pro, color de funda ${colorFundaSeleccionado}, color de iPhone ${colorIphoneSeleccionado}`;
     whatsappButton.href = `https://wa.me/59164465212?text=${encodeURIComponent(mensaje)}`;
   }
 }
@@ -67,7 +88,7 @@ function previewProductoSiliconaMax(nombreColor, imagen, elemento) {
 
   if (mainImage) {
     mainImage.src = imagen;
-    mainImage.alt = "Funda de silicona color " + nombreColor;
+    mainImage.alt = "Funda de silicona 17 Pro color " + nombreColor;
   }
 
   if (selectedColor) {
@@ -83,7 +104,7 @@ function fijarProductoSiliconaMax(nombreColor, imagen, elemento) {
 
   if (mainImage) {
     mainImage.src = imagen;
-    mainImage.alt = "Funda de silicona color " + nombreColor;
+    mainImage.alt = "Funda de silicona 17 Pro color " + nombreColor;
   }
 
   if (selectedColor) {
@@ -129,7 +150,7 @@ function cambiarProductoSiliconaMax(nombreColor, imagen, elemento) {
 
   if (mainImage) {
     mainImage.src = imagen;
-    mainImage.alt = "Funda de silicona color " + nombreColor;
+    mainImage.alt = "Funda de silicona 17 Pro color " + nombreColor;
   }
 
   if (selectedColor) {
