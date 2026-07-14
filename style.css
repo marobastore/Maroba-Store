@@ -1238,3 +1238,16 @@ body {
   box-shadow: 0 0 0 3px rgba(74, 181, 212, 0.14) !important;
   transform: translateY(-2px) !important;
 }
+/* ===== LOGO MAROBA ===== */
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.logo img {
+  height: 42px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+}
