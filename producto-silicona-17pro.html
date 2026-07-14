@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Funda de silicona iPhone 17 Pro | Maroba Store</title>
+  <title>Maroba Store | Accesorios para celulares</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -16,14 +16,14 @@
     <!-- HEADER -->
     <header class="header">
       <div class="logo">
-        Maroba<span>Store</span>
+        <img src="img/logo-maroba.png" alt="Maroba Store">
       </div>
 
       <nav class="nav">
         <a href="index.html">Inicio</a>
-        <a href="index.html#productos">Tienda</a>
-        <a href="index.html#recomendados">Recomendados</a>
-        <a href="index.html#contacto">Contacto</a>
+        <a href="#productos">Tienda</a>
+        <a href="#recomendados">Recomendados</a>
+        <a href="#contacto">Contacto</a>
       </nav>
 
       <a 
@@ -36,244 +36,229 @@
       </a>
     </header>
 
-    <!-- DETALLE PRODUCTO -->
-    <section class="amazon-product-detail">
+    <!-- HERO / BANNER -->
+    <section class="hero">
+      <div class="hero-bg"></div>
 
-      <!-- GALERÍA IZQUIERDA -->
-<div class="amazon-gallery single-gallery">
+      <div class="hero-content">
+        <h1>Shop</h1>
 
-  <div class="amazon-main-image">
-    <img 
-      id="mainProductImage"
-      src="img/silicona-17pro-blanco.jpg"
-      alt="Funda de silicona iPhone 17 Pro color blanco"
-    />
-  </div>
+        <div class="hero-search">
+          <h2>Todo para tu celular</h2>
 
-</div>
+          <div class="search-box">
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="Buscar en Maroba Store..." 
+            />
 
-      <!-- INFORMACIÓN DERECHA -->
-      <div class="amazon-info">
-
-        <h1 class="amazon-title">
-          Funda de silicona para iPhone 17 Pro
-        </h1>
-
-        <p class="amazon-subtitle">
-          Acabado suave al tacto y revestimiento interior tipo gamuza que ayuda a proteger el equipo contra rayones.
-        </p>
-
-        <div class="amazon-rating">
-          ★ 4.9 | Producto destacado
-        </div>
-
-        <div class="amazon-price-box">
-          <span class="amazon-price-label">Precio:</span>
-          <strong class="amazon-price">Bs 50</strong>
-        </div>
-
-        <!-- COLOR DEL IPHONE -->
-        <div class="selector-block">
-          <h3>
-            Color de tu iPhone 17 Pro:
-            <span id="selectedPhoneColor">Plata / Gris</span>
-          </h3>
-
-          <div class="phone-model-grid">
-
-            <button 
-              class="phone-swatch active"
-              onclick="seleccionarColorIphone('Plata / Gris', this)"
-              title="Plata / Gris"
-            >
-              <img src="img/iphone-17pro-plata.jpg" alt="iPhone 17 Pro Plata / Gris">
-              <span class="phone-swatch-name">Plata / Gris</span>
-            </button>
-
-            <button 
-              class="phone-swatch"
-              onclick="seleccionarColorIphone('Naranja', this)"
-              title="Naranja"
-            >
-              <img src="img/iphone-17pro-naranja.jpg" alt="iPhone 17 Pro Naranja">
-              <span class="phone-swatch-name">Naranja</span>
-            </button>
-
-            <button 
-              class="phone-swatch"
-              onclick="seleccionarColorIphone('Azul', this)"
-              title="Azul"
-            >
-              <img src="img/iphone-17pro-azul.jpg" alt="iPhone 17 Pro Azul">
-              <span class="phone-swatch-name">Azul</span>
-            </button>
-
+            <button onclick="buscarProducto()">Buscar</button>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- COLOR DE FUNDA -->
-        <div class="selector-block">
-          <h3>
-            Color de funda:
-            <span id="selectedColor">Blanco</span>
-          </h3>
+    <!-- PRODUCTOS -->
+    <section class="shop-section" id="productos">
 
-          <div class="swatch-row">
+      <!-- CATEGORÍAS -->
+      <aside class="sidebar">
+        <h3>Categorías</h3>
 
-            <button 
-              class="color-dot blanco active"
-              onmouseenter="previsualizarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg')"
-              onclick="fijarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg', this)"
-              title="Blanco"
-            ></button>
+        <ul>
+          <li class="active">Todos</li>
+          <li>Fundas</li>
+          <li>Cargadores</li>
+          <li>Audífonos</li>
+          <li>Protectores</li>
+          <li>Ofertas</li>
+        </ul>
+      </aside>
 
-            <button 
-              class="color-dot marfil"
-              onmouseenter="previsualizarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg')"
-              onclick="fijarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg', this)"
-              title="Marfil"
-            ></button>
+      <!-- GRILLA DE PRODUCTOS -->
+      <div class="products-grid">
 
-            <button 
-              class="color-dot negro"
-              onmouseenter="previsualizarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg')"
-              onclick="fijarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg', this)"
-              title="Negro"
-            ></button>
+        <!-- PRODUCTO 1: FUNDA GAMUZADA -->
+        <article class="product-card">
+          <span class="tag">Fundas</span>
 
-            <button 
-              class="color-dot azul-marino"
-              onmouseenter="previsualizarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg')"
-              onclick="fijarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg', this)"
-              title="Azul marino"
-            ></button>
-
-            <button 
-              class="color-dot indigo"
-              onmouseenter="previsualizarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg')"
-              onclick="fijarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg', this)"
-              title="Índigo"
-            ></button>
-
-            <button 
-              class="color-dot vino"
-              onmouseenter="previsualizarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg')"
-              onclick="fijarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg', this)"
-              title="Vino"
-            ></button>
-
-            <button 
-              class="color-dot ciruela-profundo"
-              onmouseenter="previsualizarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg')"
-              onclick="fijarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg', this)"
-              title="Ciruela profundo"
-            ></button>
-
-            <button 
-              class="color-dot morado"
-              onmouseenter="previsualizarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg')"
-              onclick="fijarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg', this)"
-              title="Morado"
-            ></button>
-
-            <button 
-              class="color-dot lila"
-              onmouseenter="previsualizarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg')"
-              onclick="fijarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg', this)"
-              title="Lila"
-            ></button>
-
-            <button 
-              class="color-dot palo-rosa"
-              onmouseenter="previsualizarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg')"
-              onclick="fijarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg', this)"
-              title="Palo rosa"
-            ></button>
-
-            <button 
-              class="color-dot verde-agua"
-              onmouseenter="previsualizarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg')"
-              onclick="fijarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg', this)"
-              title="Verde agua"
-            ></button>
-
-          </div>
-        </div>
-
-        <!-- CANTIDAD -->
-        <div class="quantity-box">
-          <span>Cantidad</span>
-
-          <div class="quantity-control">
-            <button type="button" onclick="restarCantidad()">−</button>
-            <strong id="cantidadProducto">1</strong>
-            <button type="button" onclick="sumarCantidad()">+</button>
-          </div>
-
-          <small>Disponible</small>
-        </div>
-
-        <!-- MÉTODO DE ENTREGA -->
-        <div class="delivery-options">
-
-          <button 
-            type="button" 
-            class="delivery-card active"
-            onclick="seleccionarEntrega('Entrega disponible', this)"
-          >
+          <a href="producto-funda.html" class="product-card-link">
             <img 
-              src="img/transporte.png" 
-              alt="Entrega disponible" 
-              class="delivery-img-icon"
-            >
-            <span>Entrega disponible</span>
-          </button>
+              src="img/funda-negra.jpg" 
+              alt="Funda gamuzada para iPhone"
+            />
 
-          <button 
-            type="button" 
-            class="delivery-card"
-            onclick="seleccionarEntrega('Retiro en tienda', this)"
-          >
+            <h3>Funda gamuzada iPhone</h3>
+            <p class="rating">★ 5.0 | Colores disponibles</p>
+
+            <div class="price-row">
+              <strong>Desde Bs 45</strong>
+            </div>
+          </a>
+
+          <div class="buttons">
+            <a href="producto-funda.html">Agregar al carrito</a>
+            <a href="producto-funda.html">Comprar</a>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 2: FUNDA DE SILICONA 17 PRO -->
+        <article class="product-card">
+          <span class="tag">Fundas</span>
+
+          <a href="producto-silicona-17pro.html" class="product-card-link">
             <img 
-              src="img/tienda.png" 
-              alt="Retiro en tienda" 
-              class="delivery-img-icon"
+              src="img/silicona-17pro-blanco.jpg" 
+              alt="Funda de silicona 17 Pro"
+            />
+
+            <h3>Funda de silicona 17 Pro</h3>
+            <p class="rating">★ 5.0 | Colores disponibles</p>
+
+            <div class="price-row">
+              <strong>Bs 50</strong>
+            </div>
+          </a>
+
+          <div class="buttons">
+            <a href="producto-silicona-17pro.html">Agregar al carrito</a>
+            <a href="producto-silicona-17pro.html">Comprar</a>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 3: CARGADOR -->
+        <article class="product-card">
+          <span class="tag">Carga</span>
+
+          <img 
+            src="https://images.unsplash.com/photo-1618577608401-8f43a5c42b73?q=80&w=600&auto=format&fit=crop" 
+            alt="Cargador rápido"
+          />
+
+          <h3>Cargador rápido 20W</h3>
+          <p class="rating">★ 4.8 | 15 reseñas</p>
+
+          <div class="price-row">
+            <strong>Bs 70</strong>
+          </div>
+
+          <div class="buttons">
+            <button type="button">Agregar al carrito</button>
+
+            <a 
+              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20el%20Cargador%20rápido%2020W" 
+              target="_blank"
             >
-            <span>Retiro en tienda</span>
-          </button>
+              Comprar
+            </a>
+          </div>
+        </article>
 
-        </div>
+        <!-- PRODUCTO 4: AUDÍFONOS -->
+        <article class="product-card">
+          <span class="tag">Audio</span>
 
-        <!-- BOTONES -->
-        <div class="product-action-box">
+          <img 
+            src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?q=80&w=600&auto=format&fit=crop" 
+            alt="Audífonos bluetooth"
+          />
 
-          <button 
-            type="button" 
-            class="add-cart-button"
-            onclick="agregarCarritoSilicona()"
-          >
-            <span class="button-icon">🛒</span>
-            Añadir al carrito
-          </button>
+          <h3>Audífonos Bluetooth</h3>
+          <p class="rating">★ 4.9 | 30 reseñas</p>
 
-          <button 
-            type="button" 
-            class="buy-button"
-            onclick="comprarAhoraSilicona()"
-          >
-            <span class="button-icon">🛒</span>
-            Compra ahora
-          </button>
+          <div class="price-row">
+            <strong>Bs 120</strong>
+          </div>
 
-        </div>
+          <div class="buttons">
+            <button type="button">Agregar al carrito</button>
 
-        <a href="index.html#productos" class="back-link">
-          ← Volver a productos
-        </a>
+            <a 
+              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20Audífonos%20Bluetooth" 
+              target="_blank"
+            >
+              Comprar
+            </a>
+          </div>
+        </article>
 
       </div>
-
     </section>
+
+    <!-- RECOMENDADOS -->
+    <section class="recommendations" id="recomendados">
+      <div class="section-title">
+        <h2>Recomendaciones para ti</h2>
+        <span>← →</span>
+      </div>
+
+      <div class="recommendation-grid">
+
+        <div class="mini-card">
+          <img 
+            src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=600&auto=format&fit=crop" 
+            alt="Audífonos Pro"
+          />
+
+          <h3>Audífonos Pro</h3>
+          <strong>Bs 150</strong>
+        </div>
+
+        <div class="mini-card">
+          <img 
+            src="https://images.unsplash.com/photo-1587033411391-5d9e51cce126?q=80&w=600&auto=format&fit=crop" 
+            alt="Cable USB-C"
+          />
+
+          <h3>Cable USB-C</h3>
+          <strong>Bs 35</strong>
+        </div>
+
+        <div class="mini-card">
+          <img 
+            src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=600&auto=format&fit=crop" 
+            alt="Funda Premium"
+          />
+
+          <h3>Funda Premium</h3>
+          <strong>Bs 60</strong>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div>
+        <h2>¿Listo para renovar tus accesorios?</h2>
+        <p>Recibe novedades, ofertas y productos destacados de Maroba Store.</p>
+      </div>
+
+      <form>
+        <input type="email" placeholder="Tu correo" />
+        <button type="button">Enviar</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+      <div>
+        <h3>Maroba Store</h3>
+        <p>Accesorios para celulares, fundas, cargadores, audífonos y más.</p>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <p>WhatsApp: 64465212</p>
+        <p>Bolivia</p>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <p>Instagram · TikTok · Facebook</p>
+      </div>
+    </footer>
 
   </main>
 
