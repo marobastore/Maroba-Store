@@ -1177,3 +1177,48 @@ body {
   max-height: 520px !important;
   object-fit: contain !important;
 }
+/* ===== CORRECCIÓN DE COLORES DE FUNDAS ===== */
+
+.negro {
+  background: #1a1a1a !important;
+}
+
+.morado {
+  background: #7b4bb3 !important;
+}
+
+.lila {
+  background: #cfa6e8 !important;
+}
+
+.blanco {
+  background: #f8f8f8 !important;
+}
+
+.marfil {
+  background: #efe3cc !important;
+}
+
+.azul-marino {
+  background: #0f2d5c !important;
+}
+
+.indigo {
+  background: #243a6b !important;
+}
+
+.vino {
+  background: #7a0f21 !important;
+}
+
+.ciruela-profundo {
+  background: #5a102c !important;
+}
+
+.palo-rosa {
+  background: #d7a7a7 !important;
+}
+
+.verde-agua {
+  background: #9fd7d2 !important;
+}
