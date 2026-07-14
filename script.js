@@ -24,7 +24,7 @@ function buscarProducto() {
 let colorFundaSeleccionado = "Blanco";
 let colorIphoneSeleccionado = "Plata / Gris";
 let cantidadProducto = 1;
-let metodoEntregaSeleccionado = "Entrega a domicilio";
+let metodoEntregaSeleccionado = "Enviar a domicilio";
 
 
 /* =========================
