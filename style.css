@@ -1222,3 +1222,19 @@ body {
 .verde-agua {
   background: #9fd7d2 !important;
 }
+/* ===== REDONDEAR BOTONES DE ENTREGA ===== */
+
+.delivery-card {
+  border-radius: 14px !important;
+}
+
+.delivery-card.active {
+  border-color: #4ab5d4 !important;
+  box-shadow: 0 0 0 3px rgba(74, 181, 212, 0.18) !important;
+}
+
+.delivery-card:hover {
+  border-color: #4ab5d4 !important;
+  box-shadow: 0 0 0 3px rgba(74, 181, 212, 0.14) !important;
+  transform: translateY(-2px) !important;
+}
