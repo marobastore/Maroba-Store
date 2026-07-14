@@ -216,58 +216,56 @@
         </div>
 
         <!-- MÉTODO DE ENTREGA -->
-        <div class="delivery-options">
+<div class="delivery-options">
 
-          <button 
-            type="button" 
-            class="delivery-card active"
-            onclick="seleccionarEntrega('Entrega disponible', this)"
-          >
-            <img 
-              src="img/transporte.png" 
-              alt="Entrega disponible" 
-              class="delivery-img-icon"
-            >
-            <span>Entrega disponible</span>
-          </button>
+  <button 
+    type="button" 
+    class="delivery-card active"
+    onclick="seleccionarEntrega('Enviar a domicilio', this)"
+  >
+    <img 
+      src="img/transporte.png" 
+      alt="Enviar a domicilio" 
+      class="delivery-img-icon"
+    >
+    <span>Enviar a domicilio</span>
+  </button>
 
-          <button 
-            type="button" 
-            class="delivery-card"
-            onclick="seleccionarEntrega('Retiro en tienda', this)"
-          >
-            <img 
-              src="img/tienda.png" 
-              alt="Retiro en tienda" 
-              class="delivery-img-icon"
-            >
-            <span>Retiro en tienda</span>
-          </button>
+  <button 
+    type="button" 
+    class="delivery-card"
+    onclick="seleccionarEntrega('Paso a recoger', this)"
+  >
+    <img 
+      src="img/tienda.png" 
+      alt="Paso a recoger" 
+      class="delivery-img-icon"
+    >
+    <span>Paso a recoger</span>
+  </button>
 
-        </div>
+</div>
 
-        <!-- BOTONES -->
-        <div class="product-action-box">
+<!-- BOTONES -->
+<div class="product-action-box">
 
-          <button 
-            type="button" 
-            class="add-cart-button"
-            onclick="agregarCarritoSilicona()"
-          >
-            <span class="button-icon">🛒</span>
-            Añadir al carrito
-          </button>
+  <button 
+    type="button" 
+    class="add-cart-button"
+    onclick="agregarCarritoSilicona()"
+  >
+    Añadir al carrito
+  </button>
 
-          <button 
-            type="button" 
-            class="buy-button"
-            onclick="comprarAhoraSilicona()"
-          >
-            <span class="button-icon">🛒</span>
-            Compra ahora
-          </button>
+  <button 
+    type="button" 
+    class="buy-button"
+    onclick="comprarAhoraSilicona()"
+  >
+    Comprar ahora
+  </button>
 
-        </div>
+</div>
 
         <a href="index.html#productos" class="back-link">
           ← Volver a productos
