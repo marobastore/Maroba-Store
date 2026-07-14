@@ -35,14 +35,19 @@ function actualizarWhatsappSilicona() {
   const whatsappButton = document.getElementById("whatsappButton");
 
   if (whatsappButton) {
+    let textoEntrega = "";
+
+    if (metodoEntregaSeleccionado === "Paso a recoger") {
+      textoEntrega = "Quiero pasar a recoger";
+    } else {
+      textoEntrega = "Quiero que me lo envíen";
+    }
+
     const mensaje = 
       `Hola, quiero comprar:\n\n` +
-      `Producto: Funda de silicona para iPhone 17 Pro\n` +
-      `Color de funda: ${colorFundaSeleccionado}\n` +
-      `Color de iPhone: ${colorIphoneSeleccionado}\n` +
+      `Funda de silicona para iPhone 17 Pro en color: ${colorFundaSeleccionado}\n` +
       `Cantidad: ${cantidadProducto}\n` +
-      `Entrega: ${metodoEntregaSeleccionado}\n` +
-      `Precio unitario: Bs 50`;
+      `${textoEntrega}`;
 
     whatsappButton.href = `https://wa.me/59164465212?text=${encodeURIComponent(mensaje)}`;
   }
