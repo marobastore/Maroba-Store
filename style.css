@@ -1161,3 +1161,19 @@ body {
 .delivery-card:hover .delivery-svg {
   color: #126dff !important;
 }
+/* ===== GALERÍA CON UNA SOLA IMAGEN ===== */
+
+.single-gallery {
+  display: block !important;
+}
+
+.single-gallery .amazon-main-image {
+  width: 100% !important;
+  min-height: 560px !important;
+}
+
+.single-gallery .amazon-main-image img {
+  width: 100% !important;
+  max-height: 520px !important;
+  object-fit: contain !important;
+}
