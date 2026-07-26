@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carrito | Maroba Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+Carrito de compras
+</h1>
+
+<a href="index.html">
+Seguir comprando
+</a>
+
+</header>
+
+
+
+<main class="cart-container">
+
+
+<h2>
+Tus productos
+</h2>
+
+
+<div id="cart-items">
+
+</div>
+
+
+
+<div class="cart-total">
+
+<h3>
+Total: Bs <span id="cart-total">0</span>
+</h3>
+
+
+<button onclick="finalizarCompra()">
+Finalizar compra por WhatsApp
+</button>
+
+
+</div>
+
+
+</main>
+
+
+
+<script>
+
+
+let carrito = JSON.parse(
+localStorage.getItem("carritoMaroba")
+) || [];
+
+
+
+const cartItems = document.getElementById("cart-items");
+
+const cartTotal = document.getElementById("cart-total");
+
+
+
+let total = 0;
+
+
+
+if(carrito.length === 0){
+
+
+cartItems.innerHTML = `
+<h3>
+Tu carrito está vacío
+</h3>
+`;
+
+
+}
+
+
+
+carrito.forEach((producto,index)=>{
+
+
+total += producto.precio * producto.cantidad;
+
+
+
+cartItems.innerHTML += `
+
+<div class="cart-product">
+
+
+<h3>
+${producto.nombre}
+</h3>
+
+
+<p>
+Cantidad: ${producto.cantidad}
+</p>
+
+
+<p>
+Precio: Bs ${producto.precio}
+</p>
+
+
+<button onclick="eliminarProducto(${index})">
+Eliminar
+</button>
+
+
+</div>
+
+`;
+
+
+
+});
+
+
+
+cartTotal.innerHTML = total;
+
+
+
+function eliminarProducto(index){
+
+
+carrito.splice(index,1);
+
+
+localStorage.setItem(
+"carritoMaroba",
+JSON.stringify(carrito)
+);
+
+
+location.reload();
+
+
+}
+
+
+
+
+function finalizarCompra(){
+
+
+let mensaje = 
+"Hola, quiero realizar una compra:%0A%0A";
+
+
+carrito.forEach(producto=>{
+
+
+mensaje += 
+`${producto.nombre} x${producto.cantidad} - Bs ${producto.precio}%0A`;
+
+
+});
+
+
+
+mensaje += 
+`%0ATotal: Bs ${total}`;
+
+
+
+window.open(
+
+"https://wa.me/59164465212?text=" + mensaje,
+
+"_blank"
+
+);
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
