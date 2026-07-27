@@ -67,47 +67,80 @@
 
 
 
+<script src="cart.js"></script>
+
 <script>
-
-
-let carrito = JSON.parse(
-localStorage.getItem("carritoMaroba")
-) || [];
-
 
 
 const cartItems = document.getElementById("cart-items");
 
 const cartTotal = document.getElementById("cart-total");
 
-
-
 let total = 0;
 
+let carrito = [];
 
 
-if(carrito.length === 0){
 
-
-cartItems.innerHTML = `
-<h3>
-Tu carrito está vacío
-</h3>
-`;
-
-
+function getProductoKey(producto) {
+  return [
+    String(producto.nombre ?? "").trim(),
+    Number(producto.precio) || 0,
+    String(producto.colorFunda ?? "").trim(),
+    String(producto.colorIphone ?? "").trim(),
+    String(producto.entrega ?? "").trim(),
+  ].join("\x1f");
 }
 
 
 
-carrito.forEach((producto,index)=>{
+function agruparProductosRepetidos(carritoRaw) {
+  const agrupados = [];
+  const indicePorClave = {};
+
+  carritoRaw.forEach((producto) => {
+    const key = getProductoKey(producto);
+    const cantidad = Number(producto.cantidad) || 1;
+
+    if (indicePorClave[key] !== undefined) {
+      agrupados[indicePorClave[key]].cantidad += cantidad;
+    } else {
+      indicePorClave[key] = agrupados.length;
+      agrupados.push({
+        nombre: producto.nombre,
+        precio: producto.precio,
+        cantidad: cantidad,
+        colorFunda: producto.colorFunda ?? "",
+        colorIphone: producto.colorIphone ?? "",
+        entrega: producto.entrega ?? "",
+      });
+    }
+  });
+
+  return agrupados;
+}
 
 
-total += producto.precio * producto.cantidad;
 
+function renderizarProductos() {
+  carrito = agruparProductosRepetidos(getCart());
+  total = 0;
+  cartItems.innerHTML = "";
 
+  if (carrito.length === 0) {
+    cartItems.innerHTML = `
+<h3>
+Tu carrito está vacío
+</h3>
+`;
+    cartTotal.innerHTML = 0;
+    return;
+  }
 
-cartItems.innerHTML += `
+  carrito.forEach((producto, index) => {
+    total += producto.precio * producto.cantidad;
+
+    cartItems.innerHTML += `
 
 <div class="cart-product">
 
@@ -135,32 +168,31 @@ Eliminar
 </div>
 
 `;
+  });
+
+  cartTotal.innerHTML = total;
+}
 
 
 
-});
+renderizarProductos();
 
 
 
-cartTotal.innerHTML = total;
+function eliminarProducto(index) {
+  const producto = carrito[index];
 
+  if (!producto) {
+    return;
+  }
 
+  const key = getProductoKey(producto);
+  const carritoActualizado = getCart().filter(
+    (item) => getProductoKey(item) !== key
+  );
 
-function eliminarProducto(index){
-
-
-carrito.splice(index,1);
-
-
-localStorage.setItem(
-"carritoMaroba",
-JSON.stringify(carrito)
-);
-
-
-location.reload();
-
-
+  saveCart(carritoActualizado);
+  location.reload();
 }
 
 

@@ -194,11 +194,7 @@ function agregarCarritoSilicona() {
     precio: 50
   };
 
-  let carrito = JSON.parse(localStorage.getItem("carritoMaroba")) || [];
-
-  carrito.push(producto);
-
-  localStorage.setItem("carritoMaroba", JSON.stringify(carrito));
+  addToCart(producto);
 
   alert(
     `Producto agregado al carrito:\n\n` +
