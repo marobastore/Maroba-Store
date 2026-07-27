@@ -166,26 +166,34 @@ Tu carrito está vacío
 
 <div class="cart-product">
 
+<img 
+src="img/silicona-17pro-blanco.png" 
+class="cart-image"
+>
+
+<div class="cart-info">
 
 <h3>
 ${producto.nombre}
 </h3>
 
-
 <p>
 Cantidad: ${producto.cantidad}
 </p>
 
-
 <p>
-Precio: Bs ${producto.precio}
+Precio unitario: Bs ${producto.precio}
 </p>
 
+<p>
+Subtotal: Bs ${producto.precio * producto.cantidad}
+</p>
 
 <button onclick="eliminarProducto(${index})">
 Eliminar
 </button>
 
+</div>
 
 </div>
 
