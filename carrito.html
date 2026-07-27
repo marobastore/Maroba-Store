@@ -158,7 +158,10 @@ Tu carrito está vacío
     cartTotal.innerHTML = 0;
     return;
   }
-
+function cambiarCantidad(index,cantidad){
+  updateQuantity(index,cantidad);
+  renderizarProductos();
+}
   carrito.forEach((producto, index) => {
     total += producto.precio * producto.cantidad;
 
@@ -178,7 +181,20 @@ ${producto.nombre}
 </h3>
 
 <p>
-Cantidad: ${producto.cantidad}
+<div class="quantity-box">
+
+<button onclick="cambiarCantidad(${index}, ${producto.cantidad - 1})">
+−
+</button>
+
+<span>${producto.cantidad}</span>
+
+<button onclick="cambiarCantidad(${index}, ${producto.cantidad + 1})">
++
+</button>
+
+</div>
+
 </p>
 
 <p>
