@@ -1,284 +1,473 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Funda de silicona iPhone 17 Pro | Maroba Store</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css" />
+<title>
+Apple Cable USB-C a USB-C 60W | Maroba Store
+</title>
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="style.css" />
+
 </head>
+
 
 <body>
 
-  <main class="page">
+<main class="page">
 
-    <!-- HEADER -->
+
+<!-- HEADER -->
 <header class="header">
 
-  <a href="index.html" class="logo">
-    <img src="img/logo-maroba.png" alt="Maroba Store">
-  </a>
+<a href="index.html" class="logo">
+<img src="img/logo-maroba.png" alt="Maroba Store">
+</a>
 
-  <nav class="nav">
-    <a href="index.html">Inicio</a>
-    <a href="index.html#productos">Tienda</a>
-    <a href="index.html#recomendados">Recomendados</a>
-    <a href="index.html#contacto">Contacto</a>
-  </nav>
 
-  <a 
-    class="cart" 
-    href="https://wa.me/59164465212" 
-    target="_blank"
-    aria-label="WhatsApp Maroba Store"
-  >
-    🛒
-  </a>
+<nav class="nav">
+
+<a href="index.html">Inicio</a>
+<a href="index.html#productos">Tienda</a>
+<a href="index.html#recomendados">Recomendados</a>
+<a href="index.html#contacto">Contacto</a>
+
+</nav>
+
+
+<a 
+class="cart"
+href="carrito.html"
+aria-label="Carrito de compras"
+>
+🛒
+</a>
+
 
 </header>
 
-    <!-- DETALLE PRODUCTO -->
-    <section class="amazon-product-detail">
 
-      <!-- GALERÍA IZQUIERDA -->
-      <div class="amazon-gallery single-gallery">
 
-        <div class="amazon-main-image">
-          <img 
-            id="mainProductImage"
-            src="img/silicona-17pro-blanco.jpg"
-            alt="Funda de silicona iPhone 17 Pro color blanco"
-          />
-        </div>
+<!-- PRODUCTO -->
 
-      </div>
+<section class="amazon-product-detail">
 
-      <!-- INFORMACIÓN DERECHA -->
-      <div class="amazon-info">
 
-        <h1 class="amazon-title">
-          Funda de silicona para iPhone 17 Pro
-        </h1>
 
-        <p class="amazon-subtitle">
-          Acabado suave al tacto y revestimiento interior tipo gamuza que ayuda a proteger el equipo contra rayones.
-        </p>
+<!-- GALERÍA -->
 
-        <div class="amazon-rating">
-          ★ 4.9 | Producto destacado
-        </div>
+<div class="amazon-gallery">
 
-        <div class="amazon-price-box">
-          <span class="amazon-price-label">Precio:</span>
-          <strong class="amazon-price">Bs 50</strong>
-        </div>
 
-        <!-- COLOR DEL IPHONE -->
-        <div class="selector-block">
-          <h3>
-            Color de tu iPhone 17 Pro:
-            <span id="selectedPhoneColor">Plata / Gris</span>
-          </h3>
+<div class="amazon-main-image">
 
-          <div class="phone-model-grid">
+<img
+id="mainProductImage"
+src="img/cable-cc-trenzado-1m-blanco-01.png"
+alt="Cable USB-C a USB-C 60W"
+/>
 
-            <button 
-              class="phone-swatch active"
-              onclick="seleccionarColorIphone('Plata / Gris', this)"
-              title="Plata / Gris"
-            >
-              <img src="img/iphone-17pro-plata.jpg" alt="iPhone 17 Pro Plata / Gris">
-              <span class="phone-swatch-name">Plata / Gris</span>
-            </button>
+</div>
 
-            <button 
-              class="phone-swatch"
-              onclick="seleccionarColorIphone('Naranja', this)"
-              title="Naranja"
-            >
-              <img src="img/iphone-17pro-naranja.jpg" alt="iPhone 17 Pro Naranja">
-              <span class="phone-swatch-name">Naranja</span>
-            </button>
 
-            <button 
-              class="phone-swatch"
-              onclick="seleccionarColorIphone('Azul', this)"
-              title="Azul"
-            >
-              <img src="img/iphone-17pro-azul.jpg" alt="iPhone 17 Pro Azul">
-              <span class="phone-swatch-name">Azul</span>
-            </button>
 
-          </div>
-        </div>
+<div class="amazon-thumbnails">
 
-        <!-- COLOR DE FUNDA -->
-        <div class="selector-block">
-          <h3>
-            Color de funda:
-            <span id="selectedColor">Blanco</span>
-          </h3>
 
-          <div class="swatch-row">
+<img
+class="amazon-thumb active"
+src="img/cable-cc-trenzado-1m-blanco-01.png"
+onclick="cambiarImagenCable('img/cable-cc-trenzado-1m-blanco-01.png', this)"
+>
 
-            <button 
-              class="color-dot blanco active"
-              onmouseenter="previsualizarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg')"
-              onclick="fijarProductoSilicona('Blanco', 'img/silicona-17pro-blanco.jpg', this)"
-              title="Blanco"
-            ></button>
 
-            <button 
-              class="color-dot marfil"
-              onmouseenter="previsualizarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg')"
-              onclick="fijarProductoSilicona('Marfil', 'img/silicona-17pro-marfil.jpg', this)"
-              title="Marfil"
-            ></button>
+<img
+class="amazon-thumb"
+src="img/cable-cc-trenzado-1m-blanco-02.png"
+onclick="cambiarImagenCable('img/cable-cc-trenzado-1m-blanco-02.png', this)"
+>
 
-            <button 
-              class="color-dot negro"
-              onmouseenter="previsualizarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg')"
-              onclick="fijarProductoSilicona('Negro', 'img/silicona-17pro-negro.jpg', this)"
-              title="Negro"
-            ></button>
 
-            <button 
-              class="color-dot azul-marino"
-              onmouseenter="previsualizarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg')"
-              onclick="fijarProductoSilicona('Azul marino', 'img/silicona-17pro-azul-marino.jpg', this)"
-              title="Azul marino"
-            ></button>
+<img
+class="amazon-thumb"
+src="img/cable-cc-trenzado-1m-blanco-03.png"
+onclick="cambiarImagenCable('img/cable-cc-trenzado-1m-blanco-03.png', this)"
+>
 
-            <button 
-              class="color-dot indigo"
-              onmouseenter="previsualizarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg')"
-              onclick="fijarProductoSilicona('Índigo', 'img/silicona-17pro-indigo.jpg', this)"
-              title="Índigo"
-            ></button>
 
-            <button 
-              class="color-dot vino"
-              onmouseenter="previsualizarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg')"
-              onclick="fijarProductoSilicona('Vino', 'img/silicona-17pro-vino.jpg', this)"
-              title="Vino"
-            ></button>
+<img
+class="amazon-thumb"
+src="img/cable-cc-trenzado-1m-blanco-04.png"
+onclick="cambiarImagenCable('img/cable-cc-trenzado-1m-blanco-04.png', this)"
+>
 
-            <button 
-              class="color-dot ciruela-profundo"
-              onmouseenter="previsualizarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg')"
-              onclick="fijarProductoSilicona('Ciruela profundo', 'img/silicona-17pro-ciruela-profundo.jpg', this)"
-              title="Ciruela profundo"
-            ></button>
 
-            <button 
-              class="color-dot morado"
-              onmouseenter="previsualizarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg')"
-              onclick="fijarProductoSilicona('Morado', 'img/silicona-17pro-morado.jpg', this)"
-              title="Morado"
-            ></button>
+<img
+class="amazon-thumb"
+src="img/cable-cc-trenzado-1m-blanco-05.png"
+onclick="cambiarImagenCable('img/cable-cc-trenzado-1m-blanco-05.png', this)"
+>
 
-            <button 
-              class="color-dot lila"
-              onmouseenter="previsualizarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg')"
-              onclick="fijarProductoSilicona('Lila', 'img/silicona-17pro-lila.jpg', this)"
-              title="Lila"
-            ></button>
 
-            <button 
-              class="color-dot palo-rosa"
-              onmouseenter="previsualizarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg')"
-              onclick="fijarProductoSilicona('Palo rosa', 'img/silicona-17pro-palo-rosa.jpg', this)"
-              title="Palo rosa"
-            ></button>
+</div>
 
-            <button 
-              class="color-dot verde-agua"
-              onmouseenter="previsualizarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg')"
-              onclick="fijarProductoSilicona('Verde agua', 'img/silicona-17pro-verde-agua.jpg', this)"
-              title="Verde agua"
-            ></button>
 
-          </div>
-        </div>
+</div>
 
-        <!-- CANTIDAD -->
-        <div class="quantity-box">
-          <span>Cantidad</span>
 
-          <div class="quantity-control">
-            <button type="button" onclick="restarCantidad()">−</button>
-            <strong id="cantidadProducto">1</strong>
-            <button type="button" onclick="sumarCantidad()">+</button>
-          </div>
 
-          <small>Disponible</small>
-        </div>
 
-        <!-- MÉTODO DE ENTREGA -->
+<!-- INFORMACIÓN -->
+
+
+<div class="amazon-info">
+
+
+<h1 class="amazon-title">
+
+Apple Cable de carga tejido USB-C a USB-C 60W Carga Rápida
+
+</h1>
+
+
+
+<p class="amazon-subtitle">
+
+Cable USB-C a USB-C tejido de 1 metro diseñado para carga rápida, transferencia estable y máxima resistencia.
+
+</p>
+
+
+
+<div class="amazon-rating">
+
+★ 5.0 | Producto destacado
+
+</div>
+
+
+
+
+<div class="amazon-price-box">
+
+<span class="amazon-price-label">
+Precio:
+</span>
+
+<strong class="amazon-price">
+Bs 70
+</strong>
+
+</div>
+
+
+
+
+<!-- CARACTERÍSTICAS -->
+
+
+<div class="selector-block">
+
+<h3>
+Características:
+</h3>
+
+
+<ul>
+
+<li>Cable USB-C a USB-C</li>
+
+<li>Carga rápida hasta 60W</li>
+
+<li>Longitud de 1 metro</li>
+
+<li>Diseño tejido reforzado</li>
+
+<li>Mayor resistencia al uso diario</li>
+
+<li>Compatible con iPhone, iPad y MacBook</li>
+
+<li>Compatible con Power Delivery</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+<!-- CANTIDAD -->
+
+
+<div class="quantity-box">
+
+
+<span>
+Cantidad
+</span>
+
+
+<div class="quantity-control">
+
+<button 
+type="button"
+onclick="restarCantidad()"
+>
+−
+</button>
+
+
+<strong id="cantidadProducto">
+1
+</strong>
+
+
+<button 
+type="button"
+onclick="sumarCantidad()"
+>
++
+</button>
+
+
+</div>
+
+
+<small>
+Disponible
+</small>
+
+
+</div>
+
+
+
+
+
+<!-- ENTREGA -->
+
+
 <div class="delivery-options">
 
-  <button 
-    type="button" 
-    class="delivery-card active"
-    onclick="seleccionarEntrega('Enviar a domicilio', this)"
-  >
-    <img 
-      src="img/transporte.png" 
-      alt="Enviar a domicilio" 
-      class="delivery-img-icon"
-    >
-    <span>Enviar a domicilio</span>
-  </button>
 
-  <button 
-    type="button" 
-    class="delivery-card"
-    onclick="seleccionarEntrega('Paso a recoger', this)"
-  >
-    <img 
-      src="img/tienda.png" 
-      alt="Paso a recoger" 
-      class="delivery-img-icon"
-    >
-    <span>Paso a recoger</span>
-  </button>
+<button
+type="button"
+class="delivery-card active"
+onclick="seleccionarEntrega('Enviar a domicilio', this)"
+>
+
+
+<img
+src="img/transporte.png"
+class="delivery-img-icon"
+alt="Enviar a domicilio"
+>
+
+
+<span>
+Enviar a domicilio
+</span>
+
+
+</button>
+
+
+
+
+<button
+type="button"
+class="delivery-card"
+onclick="seleccionarEntrega('Paso a recoger', this)"
+>
+
+
+<img
+src="img/tienda.png"
+class="delivery-img-icon"
+alt="Paso a recoger"
+>
+
+
+<span>
+Paso a recoger
+</span>
+
+
+</button>
+
 
 </div>
+
+
+
+
+
 
 <!-- BOTONES -->
+
+
 <div class="product-action-box">
 
-  <button 
-    type="button" 
-    class="add-cart-button"
-    onclick="agregarCarritoSilicona()"
-  >
-    Añadir al carrito
-  </button>
 
-  <button 
-    type="button" 
-    class="buy-button"
-    onclick="comprarAhoraSilicona()"
-  >
-    Comprar ahora
-  </button>
+<button
+type="button"
+class="add-cart-button"
+onclick="agregarCarritoCable()"
+>
+
+Añadir al carrito
+
+</button>
+
+
+
+<button
+type="button"
+class="buy-button"
+onclick="comprarAhoraCable()"
+>
+
+Comprar ahora
+
+</button>
+
+
 
 </div>
 
-        <a href="index.html#productos" class="back-link">
-          ← Volver a productos
-        </a>
 
-      </div>
 
-    </section>
 
-  </main>
 
-  <script src="cart.js"></script>
-  <script src="script.js"></script>
+<a href="index.html#productos" class="back-link">
+
+← Volver a productos
+
+</a>
+
+
+
+</div>
+
+
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+
+function cambiarImagenCable(imagen, elemento){
+
+const mainImage = document.getElementById("mainProductImage");
+
+if(mainImage){
+
+mainImage.src = imagen;
+
+}
+
+
+document.querySelectorAll(".amazon-thumb")
+.forEach(img => img.classList.remove("active"));
+
+
+if(elemento){
+
+elemento.classList.add("active");
+
+}
+
+}
+
+
+
+
+function agregarCarritoCable(){
+
+
+const producto = {
+
+nombre:
+"Apple Cable de carga tejido USB-C a USB-C 60W",
+
+precio:70,
+
+cantidad:
+Number(document.getElementById("cantidadProducto").textContent),
+
+entrega:
+"Enviar a domicilio"
+
+};
+
+
+addToCart(producto);
+
+
+
+alert(
+"Producto agregado al carrito:\n\n" +
+producto.nombre +
+"\nCantidad: " +
+producto.cantidad +
+"\nPrecio: Bs " +
+producto.precio
+);
+
+
+}
+
+
+
+
+function comprarAhoraCable(){
+
+
+const cantidad =
+document.getElementById("cantidadProducto").textContent;
+
+
+
+const mensaje =
+`Hola, quiero comprar:\n\n`+
+`Apple Cable de carga tejido USB-C a USB-C 60W\n`+
+`Cantidad: ${cantidad}`;
+
+
+
+window.open(
+
+"https://wa.me/59164465212?text="+
+encodeURIComponent(mensaje),
+
+"_blank"
+
+);
+
+
+}
+
+
+
+</script>
+
+
+
+<script src="cart.js"></script>
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
