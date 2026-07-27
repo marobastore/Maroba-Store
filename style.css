@@ -1717,3 +1717,23 @@ object-fit:contain;
 .cart-info{
 flex:1;
 }
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-box button {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.quantity-box span {
+  font-size: 16px;
+  font-weight: bold;
+}
