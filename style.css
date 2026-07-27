@@ -1737,3 +1737,83 @@ flex:1;
   font-size: 16px;
   font-weight: bold;
 }
+/* ================================
+   CORRECCIÓN FINAL TARJETAS PRODUCTOS
+================================ */
+
+.products-grid {
+  align-items: stretch !important;
+}
+
+.product-card {
+  min-height: 255px !important;
+  height: 255px !important;
+  padding: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+
+/* Imagen más pequeña */
+.product-card img,
+.product-card-link img {
+
+  height: 115px !important;
+  margin: 8px auto !important;
+
+}
+
+
+/* Título compacto */
+.product-card h3,
+.product-card-link h3 {
+
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  min-height: 32px !important;
+  margin-bottom: 5px !important;
+
+}
+
+
+/* Rating */
+.rating {
+
+  margin-bottom: 4px !important;
+
+}
+
+
+/* Precio */
+.price-row {
+
+  margin-top: auto !important;
+  margin-bottom: 8px !important;
+
+}
+
+
+/* Botones siempre abajo */
+
+.buttons {
+
+  margin-top: auto !important;
+
+}
+
+
+.buttons button,
+.buttons a {
+
+  padding: 8px !important;
+  font-size: 9px !important;
+
+}
+
+
+/* Quitar espacio extraño arriba */
+.shop-section {
+
+  padding-top: 20px !important;
+
+}
