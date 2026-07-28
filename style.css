@@ -130,9 +130,27 @@ img{
 
 .search-box{
 
-    flex:1;
-
     display:flex;
+    align-items:center;
+
+    width:100%;
+
+    background:#eaf7fb;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:2px solid transparent;
+
+    transition:0.3s;
+
+}
+
+
+.search-box:focus-within{
+
+    border-color:#4bb3d3;
 
 }
 
@@ -140,31 +158,47 @@ img{
 
 .search-box input{
 
-    width:100%;
+    flex:1;
 
-    border:1px solid #ddd;
+    height:45px;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
 
     padding:0 20px;
 
     font-size:15px;
 
+    color:#333;
+
 }
 
 
 
-.search-box button{
+.search-box input::placeholder{
 
-    width:110px;
+    color:#8a8a8a;
+
+}
+
+
+
+.search-icon{
+
+    width:55px;
+
+    height:45px;
 
     border:none;
 
-    background:#50b4d8;
-
-    color:white;
-
-    font-weight:bold;
+    background:transparent;
 
     cursor:pointer;
+
+    font-size:20px;
 
 }
 
