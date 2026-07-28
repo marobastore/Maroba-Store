@@ -280,7 +280,7 @@ img{
 
     overflow:hidden;
 
-    border-radius:35px;
+    border-radius:50px;
 
 }
 
@@ -289,22 +289,33 @@ img{
 
     position:absolute;
 
-    inset:0;
+    width:100%;
 
-    opacity:0;
+    height:100%;
 
-    transition:opacity .8s ease;
+    top:0;
 
-    border-radius:35px;
+    left:0;
+
+    transform:translateX(100%);
+
+    transition:transform .6s ease;
+
+    border-radius:50px;
 
     overflow:hidden;
 
 }
 
-
 .hero-slide.active{
 
-    opacity:1;
+    transform:translateX(0);
+
+}
+
+.hero-slide.prev{
+
+    transform:translateX(-100%);
 
 }
 
