@@ -67,7 +67,7 @@ img{
     height:95px;
 
     display:grid;
-    grid-template-columns:200px 1fr 200px;
+    grid-template-columns:180px 1fr auto;
 
     align-items:center;
 
