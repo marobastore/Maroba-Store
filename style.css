@@ -213,34 +213,18 @@ img{
 
 
 
-.whatsapp-header{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    color:#111;
-
-    font-size:14px;
-
-}
-
-
-.whatsapp-header strong{
-
-    color:#50b4d8;
-
-    font-size:18px;
-
-}
-
-
-
 .cart-icon{
 
     font-size:25px;
+
+}
+
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
 
     justify-self:end;
 
