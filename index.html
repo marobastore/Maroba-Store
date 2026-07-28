@@ -1,365 +1,998 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<div class="product-card">
 
-  <title>Maroba Store | Accesorios para celulares</title>
-<span class="category">
-Cables y cargadores
-</span>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css" />
+<title>Maroba Store | Accesorios para celulares</title>
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-  <main class="page">
 
-    <!-- HEADER -->
-<header class="header">
+<!-- BARRA SUPERIOR -->
 
-  <a href="index.html" class="logo">
-    <img src="img/logo-maroba.png" alt="Maroba Store">
-  </a>
+<div class="top-bar">
 
-  <nav class="nav">
-    <a href="index.html">Inicio</a>
-    <a href="#productos">Tienda</a>
-    <a href="#recomendados">Recomendados</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<p>
+🚚 Envíos a todo Bolivia | 📲 Atención por WhatsApp
+</p>
 
-  <a
-    class="cart"
-    href="carrito.html"
-    aria-label="Carrito de compras"
+</div>
+
+
+
+<!-- HEADER PRINCIPAL -->
+
+<header class="main-header">
+
+
+<a href="index.html" class="logo">
+
 <img 
-src="img/cable-cc-trenzado-1m-blanco-01.png" 
-alt="Apple Cable de carga tejido USB-C a USB-C 60W"
-  >
+src="img/logo-maroba.png"
+alt="Maroba Store"
 >
-    🛒
-  </a>
+
+</a>
+
+
+
+<div class="search-container">
+
+
+<div class="category-select">
+
+<span>
+Categorías
+</span>
+
+<select>
+
+<option>
+Todos
+</option>
+
+<option>
+Fundas
+</option>
+
+<option>
+Cables
+</option>
+
+<option>
+Cargadores
+</option>
+
+<option>
+Audio
+</option>
+
+</select>
+
+
+</div>
+
+
+
+<div class="search-box">
+
+
+<input 
+type="text"
+id="searchInput"
+placeholder="Buscar productos en Maroba Store..."
+>
+
+
+<button onclick="buscarProducto()">
+
+Buscar
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<a 
+class="whatsapp-header"
+href="https://wa.me/59174441937"
+target="_blank"
+>
+
+
+<span>
+WhatsApp
+</span>
+
+
+<strong>
+74441937
+</strong>
+
+
+</a>
+
+
+
+
+<a 
+href="carrito.html"
+class="cart-icon"
+aria-label="Carrito"
+>
+
+🛒
+
+</a>
+
+
 
 </header>
 
-    <!-- HERO / BANNER -->
-    <section class="hero">
-      <div class="hero-bg"></div>
 
-      <div class="hero-content">
-        <h1>Shop</h1>
 
-        <div class="hero-search">
-          <h2>Todo para tu celular</h2>
 
-          <div class="search-box">
-            <input 
-              type="text" 
-              id="searchInput" 
-              placeholder="Buscar en Maroba Store..." 
-            />
+<!-- MENU -->
 
-            <button onclick="buscarProducto()">Buscar</button>
-          </div>
-        </div>
-      </div>
-    </section>
+<nav class="main-menu">
 
-    <!-- PRODUCTOS -->
-    <section class="shop-section" id="productos">
 
-      <!-- CATEGORÍAS -->
-      <aside class="sidebar">
-        <h3>Categorías</h3>
+<a href="index.html">
+Inicio
+</a>
 
-        <ul>
-          <li class="active">Todos</li>
-          <li>Fundas</li>
-          <li>Cargadores</li>
-          <li>Audífonos</li>
-          <li>Protectores</li>
-          <li>Ofertas</li>
-        </ul>
-      </aside>
 
-      <!-- GRILLA DE PRODUCTOS -->
-      <div class="products-grid">
+<a href="#productos">
+Tienda
+</a>
 
-        <!-- PRODUCTO 1: FUNDA GAMUZADA -->
-        <article class="product-card">
-          <span class="tag">Fundas</span>
 
-          <a href="producto-funda.html" class="product-card-link">
-            <img 
-              src="img/funda-negra.jpg" 
-              alt="Funda gamuzada para iPhone"
-            />
+<a href="#categorias">
+Categorías
+</a>
 
-            <h3>Funda gamuzada iPhone</h3>
-            <p class="rating">★ 5.0 | Colores disponibles</p>
 
-            <div class="price-row">
-              <strong>Desde Bs 45</strong>
-            </div>
-          </a>
+<a href="#recomendados">
+Recomendados
+</a>
 
-          <div class="buttons">
-            <a href="producto-funda.html">Agregar al carrito</a>
-            <a href="producto-funda.html">Comprar</a>
-          </div>
-        </article>
 
-        <!-- PRODUCTO 2: FUNDA DE SILICONA 17 PRO -->
-        <article class="product-card">
+<a href="#contacto">
+Contacto
+</a>
 
-  <span class="tag">Fundas</span>
+
+</nav>
+
+
+
+
+<!-- BANNER PRINCIPAL -->
+
+
+<section class="hero-slider">
+
+
+<div class="hero-slide active">
+
+
+<img
+src="img/banner-1.jpg"
+alt="Maroba Store"
+>
+
+
+<div class="hero-content">
+
+
+<h1>
+Todo para proteger y potenciar tu celular
+</h1>
+
+
+<p>
+Fundas, cables, cargadores y accesorios seleccionados para ti.
+</p>
+
+
+<a href="#productos">
+
+Ver productos
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="hero-slide">
+
+
+<img
+src="img/banner-2.jpg"
+alt="Accesorios celulares"
+>
+
+
+<div class="hero-content">
+
+
+<h1>
+Accesorios de calidad
+</h1>
+
+
+<p>
+Compra fácil y recibe en todo Bolivia.
+</p>
+
+
+<a href="#productos">
+
+Comprar ahora
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="hero-slide">
+
+
+<img
+src="img/banner-3.jpg"
+alt="Ofertas Maroba"
+>
+
+
+<div class="hero-content">
+
+
+<h1>
+Nuevos productos disponibles
+</h1>
+
+
+<p>
+Encuentra lo último en tecnología.
+</p>
+
+
+<a href="#productos">
+
+Ver catálogo
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<!-- CATEGORÍAS -->
+
+<section class="categories-section" id="categorias">
+
+
+<div class="section-header">
+
+<h2>
+Compra por categoría
+</h2>
+
+</div>
+
+
+
+<div class="categories-grid">
+
+
+<div class="category-card">
+
+<img 
+src="img/categoria-fundas.jpg"
+alt="Fundas"
+>
+
+<h3>
+Fundas
+</h3>
+
+</div>
+
+
+
+<div class="category-card">
+
+<img 
+src="img/categoria-cables.jpg"
+alt="Cables"
+>
+
+<h3>
+Cables
+</h3>
+
+</div>
+
+
+
+<div class="category-card">
+
+<img 
+src="img/categoria-cargadores.jpg"
+alt="Cargadores"
+>
+
+<h3>
+Cargadores
+</h3>
+
+</div>
+
+
+
+<div class="category-card">
+
+<img 
+src="img/categoria-audio.jpg"
+alt="Audio"
+>
+
+<h3>
+Audio
+</h3>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- PRODUCTOS -->
+
+<section class="products-section" id="productos">
+
+
+<div class="section-header">
+
+<h2>
+Productos destacados
+</h2>
+
+</div>
+
+
+
+
+<div class="products-grid">
+
+
+
+<!-- FUNDA GAMUZADA -->
+
+<article class="product-card">
+
+
+<span class="product-tag">
+Fundas
+</span>
+
+
+<a href="producto-funda.html">
+
+
+<img
+src="img/funda-negra.jpg"
+alt="Funda gamuzada iPhone"
+>
+
+
+<h3>
+Funda gamuzada para iPhone
+</h3>
+
+
+<p class="rating">
+★★★★★
+</p>
+
+
+<strong class="product-price">
+Desde Bs 45
+</strong>
+
+
+</a>
+
+
+
+<div class="product-buttons">
+
+
+<a href="producto-funda.html">
+
+Ver producto
+
+</a>
+
+
+</div>
+
+
+
+</article>
+
+
+
+
+
+<!-- FUNDA SILICONA 17 PRO -->
+
+
+<article class="product-card">
+
+
+<span class="product-tag">
+Fundas
+</span>
+
+
+
+<a href="producto-silicona-17pro.html">
+
+
+<img
+src="img/silicona-17pro-blanco.jpg"
+alt="Funda silicona iPhone 17 Pro"
+>
+
+
+<h3>
+Funda de silicona iPhone 17 Pro
+</h3>
+
+
+<p class="rating">
+★★★★★
+</p>
+
+
+<strong class="product-price">
+Bs 50
+</strong>
+
+
+</a>
+
+
+
+<div class="product-buttons">
+
+
+<a href="producto-silicona-17pro.html">
+
+Ver producto
+
+</a>
+
+
+</div>
+
+
+
+</article>
+
+
+
+
+
+
+<!-- CABLE USB C -->
+
+
+<article class="product-card">
+
+
+<span class="product-tag">
+Cables
+</span>
+
+
+
+<a href="producto-cable-cc-trenzado.html">
+
+
+<img
+src="img/cable-cc-trenzado-1m-blanco-01.png"
+alt="Cable USB C 60W"
+>
+
+
 <h3>
 Apple Cable USB-C a USB-C 60W
 </h3>
 
-  <a href="producto-silicona-17pro.html" class="product-card-link">
+
 <p class="rating">
-★ 5.0 | Disponible
+★★★★★
 </p>
 
-    <img 
-      src="img/silicona-17pro-blanco.jpg" 
-      alt="Funda de silicona 17 Pro"
-    />
 
-    <h3>Funda de silicona 17 Pro</h3>
-
-    <p class="rating">
-      ★ 5.0 | Colores disponibles
-    </p>
-
-    <div class="price-row">
-      <strong>Bs 50</strong>
-    </div>
-
-  </a>
-
-
-  <div class="buttons">
-<div class="price">
+<strong class="product-price">
 Bs 70
-</div>
-
-    <button 
-      type="button"
-      onclick="agregarCarritoSilicona()">
-<div class="product-actions">
-<button onclick="agregarCableCarrito()">
-      Agregar al carrito
-    </button>
-Agregar al carrito
-</button>
+</strong>
 
 
-    <a href="producto-silicona-17pro.html">
-<a href="producto-cable-cc-trenzado.html">
-      Comprar
-    </a>
-  </div>
-Comprar
 </a>
 
+
+
+<div class="product-buttons">
+
+
+<a href="producto-cable-cc-trenzado.html">
+
+Ver producto
+
+</a>
+
+
 </div>
+
 
 
 </article>
-        <!-- PRODUCTO 3: CABLE USB-C -->
+
+
+
+
+
+
+<!-- AUDIFONOS -->
+
 
 <article class="product-card">
 
-    <span class="tag">Cables y cargadores</span>
+
+<span class="product-tag">
+Audio
+</span>
 
 
-    <img
-        src="img/cable-cc-trenzado-1m-blanco-01.jpg"
-        alt="Apple Cable de carga tejido USB-C a USB-C 60W"
-    />
+
+<img
+src="img/audifonos.jpg"
+alt="Audífonos Bluetooth"
+>
 
 
-    <h3>
-        Apple Cable USB-C a USB-C 60W
-    </h3>
+<h3>
+Audífonos Bluetooth
+</h3>
 
 
-    <p class="rating">
-        ★ 5.0 | Disponible
-    </p>
+<p class="rating">
+★★★★★
+</p>
 
 
-    <div class="price-row">
-        <strong>
-            Bs 70
-        </strong>
-    </div>
+<strong class="product-price">
+Bs 120
+</strong>
 
 
-    <div class="buttons">
 
-        <button type="button">
-            Agregar al carrito
-        </button>
+<div class="product-buttons">
 
 
-        <a
-            href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20el%20Apple%20Cable%20USB-C%20a%20USB-C%2060W"
-            target="_blank"
-        >
-            Comprar
-        </a>
+<a href="https://wa.me/59174441937" target="_blank">
 
-    </div>
+Comprar
 
-</article>
-
-        <!-- PRODUCTO 4: AUDÍFONOS -->
-        <article class="product-card">
-          <span class="tag">Audio</span>
-
-          <img 
-            src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?q=80&w=600&auto=format&fit=crop" 
-            alt="Audífonos bluetooth"
-          />
-
-          <h3>Audífonos Bluetooth</h3>
-          <p class="rating">★ 4.9 | 30 reseñas</p>
-
-          <div class="price-row">
-            <strong>Bs 120</strong>
-          </div>
-
-          <div class="buttons">
-            <button type="button">Agregar al carrito</button>
-
-            <a 
-              href="https://wa.me/59164465212?text=Hola,%20quiero%20comprar%20Audífonos%20Bluetooth" 
-              target="_blank"
-            >
-              Comprar
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- RECOMENDADOS -->
-    <section class="recommendations" id="recomendados">
-      <div class="section-title">
-        <h2>Recomendaciones para ti</h2>
-        <span>← →</span>
-      </div>
-
-      <div class="recommendation-grid">
-
-        <div class="mini-card">
-          <img 
-            src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=600&auto=format&fit=crop" 
-            alt="Audífonos Pro"
-          />
-
-          <h3>Audífonos Pro</h3>
-          <strong>Bs 150</strong>
-        </div>
-
-        <div class="mini-card">
-          <img 
-            src="https://images.unsplash.com/photo-1587033411391-5d9e51cce126?q=80&w=600&auto=format&fit=crop" 
-            alt="Cable USB-C"
-          />
-
-          <h3>Cable USB-C</h3>
-          <strong>Bs 35</strong>
-        </div>
-
-        <div class="mini-card">
-          <img 
-            src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=600&auto=format&fit=crop" 
-            alt="Funda Premium"
-          />
-
-          <h3>Funda Premium</h3>
-          <strong>Bs 60</strong>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-      <div>
-        <h2>¿Listo para renovar tus accesorios?</h2>
-        <p>Recibe novedades, ofertas y productos destacados de Maroba Store.</p>
-      </div>
-
-      <form>
-        <input type="email" placeholder="Tu correo" />
-        <button type="button">Enviar</button>
-      </form>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer" id="contacto">
-      <div>
-        <h3>Maroba Store</h3>
-        <p>Accesorios para celulares, fundas, cargadores, audífonos y más.</p>
-      </div>
-
-      <div>
-        <h4>Contacto</h4>
-        <p>WhatsApp: 64465212</p>
-        <p>Bolivia</p>
-      </div>
-
-      <div>
-        <h4>Redes</h4>
-        <p>Instagram · TikTok · Facebook</p>
-      </div>
-    </footer>
-
-  </main>
-
-
-<!-- CARRITO LATERAL -->
-
-<div id="cart-sidebar">
-
-    <h2>
-        Tu carrito
-    </h2>
-
-
-    <div id="cart-products">
-        
-    </div>
-
-
-    <h3>
-        Total: Bs 
-        <span id="cart-total">
-            0
-        </span>
-    </h3>
-
-
-    <button>
-        Finalizar compra
-    </button>
+</a>
 
 
 </div>
 
 
+
+</article>
+
+
+
+</div>
+
+
+</section>
+<!-- RECOMENDADOS -->
+
+<section class="recommendations-section" id="recomendados">
+
+
+<div class="section-header">
+
+<h2>
+Recomendados para ti
+</h2>
+
+</div>
+
+
+
+<div class="recommendations-grid">
+
+
+
+<div class="mini-product">
+
+
+<img
+src="img/cable-cc-trenzado-1m-blanco-01.png"
+alt="Cable USB-C"
+>
+
+
+<h3>
+Cable USB-C 60W
+</h3>
+
+
+<strong>
+Bs 70
+</strong>
+
+
+</div>
+
+
+
+
+<div class="mini-product">
+
+
+<img
+src="img/silicona-17pro-negro.jpg"
+alt="Funda silicona"
+>
+
+
+<h3>
+Funda silicona premium
+</h3>
+
+
+<strong>
+Bs 50
+</strong>
+
+
+</div>
+
+
+
+
+<div class="mini-product">
+
+
+<img
+src="img/audifonos.jpg"
+alt="Audífonos"
+>
+
+
+<h3>
+Audífonos Bluetooth
+</h3>
+
+
+<strong>
+Bs 120
+</strong>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- BENEFICIOS -->
+
+
+<section class="benefits-section">
+
+
+<div class="benefit-card">
+
+
+<h3>
+🚚 Envíos
+</h3>
+
+
+<p>
+Enviamos a todo Bolivia.
+</p>
+
+
+</div>
+
+
+
+<div class="benefit-card">
+
+
+<h3>
+💳 Pagos
+</h3>
+
+
+<p>
+Métodos de pago seguros.
+</p>
+
+
+</div>
+
+
+
+
+<div class="benefit-card">
+
+
+<h3>
+💬 Atención
+</h3>
+
+
+<p>
+Soporte directo por WhatsApp.
+</p>
+
+
+</div>
+
+
+
+
+<div class="benefit-card">
+
+
+<h3>
+⭐ Calidad
+</h3>
+
+
+<p>
+Productos seleccionados.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- NEWSLETTER -->
+
+
+<section class="newsletter-section">
+
+
+<div>
+
+
+<h2>
+Mantente actualizado
+</h2>
+
+
+<p>
+Recibe novedades y promociones de Maroba Store.
+</p>
+
+
+</div>
+
+
+
+<div class="newsletter-form">
+
+
+<input
+type="email"
+placeholder="Tu correo electrónico"
+>
+
+
+<button>
+
+Suscribirme
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer class="footer" id="contacto">
+
+
+<div>
+
+
+<img
+src="img/logo-maroba.png"
+alt="Maroba Store"
+>
+
+
+<p>
+Accesorios para celulares en Bolivia.
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+Contacto
+</h3>
+
+
+<p>
+WhatsApp: 74441937
+</p>
+
+
+<p>
+Bolivia
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+Síguenos
+</h3>
+
+
+<p>
+Instagram · TikTok · Facebook
+</p>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
 <script src="cart.js"></script>
+
 <script src="script.js"></script>
 
+
+<script>
+
+
+let currentSlide = 0;
+
+
+const slides = document.querySelectorAll(".hero-slide");
+
+
+
+function changeSlide(){
+
+
+slides.forEach(slide => {
+
+slide.classList.remove("active");
+
+});
+
+
+currentSlide++;
+
+
+if(currentSlide >= slides.length){
+
+currentSlide = 0;
+
+}
+
+
+slides[currentSlide].classList.add("active");
+
+
+}
+
+
+
+setInterval(changeSlide,4000);
+
+
+
+</script>
+
+
+
 </body>
+
 </html>
