@@ -270,14 +270,19 @@ img{
 
 .hero-slider{
 
-    width:100%;
+    width:calc(100% - 80px);
+
+    max-width:1500px;
+
     height:520px;
 
-    margin-top:25px;
+    margin:30px auto;
 
     position:relative;
 
     overflow:hidden;
+
+    border-radius:35px;
 
 }
 
@@ -291,6 +296,10 @@ img{
     opacity:0;
 
     transition:opacity .8s ease;
+
+    border-radius:35px;
+
+    overflow:hidden;
 
 }
 
