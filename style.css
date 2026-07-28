@@ -89,11 +89,11 @@ img{
 
 .search-container{
 
-    flex:1;
-
     display:flex;
 
-    height:45px;
+    width:100%;
+
+    max-width:1000px;
 
 }
 
@@ -101,28 +101,38 @@ img{
 
 .category-select{
 
+    height:45px;
+
     display:flex;
 
     align-items:center;
 
     gap:15px;
 
-    padding:0 15px;
+    padding:0 18px;
 
-    border:1px solid #ddd;
+    background:#eaf7fb;
 
-    border-radius:8px 0 0 8px;
+    border-radius:30px 0 0 30px;
 
-    background:#fff;
+    border-right:1px solid #d5d5d5;
+
+    font-size:15px;
+
+    white-space:nowrap;
 
 }
-
 
 
 .category-select select{
 
     border:none;
+
+    background:transparent;
+
     outline:none;
+
+    cursor:pointer;
 
 }
 
@@ -130,20 +140,21 @@ img{
 
 .search-box{
 
-    display:flex;
-    align-items:center;
+    flex:1;
 
-    width:100%;
+    display:flex;
+
+    align-items:center;
 
     background:#eaf7fb;
 
-    border-radius:30px;
+    border-radius:0 30px 30px 0;
 
     overflow:hidden;
 
     border:2px solid transparent;
 
-    transition:0.3s;
+    transition:.3s;
 
 }
 
@@ -172,10 +183,7 @@ img{
 
     font-size:15px;
 
-    color:#333;
-
 }
-
 
 
 .search-box input::placeholder{
@@ -189,8 +197,11 @@ img{
 .search-icon{
 
     width:55px;
-
     height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     border:none;
 
