@@ -270,9 +270,7 @@ img{
 
 .hero-slider{
 
-    width:calc(100% - 80px);
-
-    max-width:1500px;
+    width:94%;
 
     height:520px;
 
@@ -302,7 +300,6 @@ img{
     overflow:hidden;
 
 }
-
 
 
 .hero-slide.active{
