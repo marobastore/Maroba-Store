@@ -64,17 +64,18 @@ img{
 .main-header{
 
     width:100%;
-    height:95px;
+
+    height:110px;
 
     display:grid;
+
     grid-template-columns:180px 1fr auto;
 
     align-items:center;
 
-    padding:0 40px;
+    padding:15px 40px;
 
 }
-
 
 
 .logo img{
