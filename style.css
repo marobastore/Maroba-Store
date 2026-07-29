@@ -282,41 +282,25 @@ img{
 
 }
 
-.hero-track{
-
-    display:flex;
-
-    gap:30px;
-
-    height:100%;
-
-    transform:translateX(calc(-78% - 30px));
-
-    transition:transform .6s ease;
-
+.hero-track {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    transition: transform 0.6s ease;
+    will-change: transform;
 }
 
-.hero-slide{
-
-    flex:0 0 78%;
-
-    height:100%;
-
-    border-radius:50px;
-
-    overflow:hidden;
-
+.hero-slide {
+    flex: 0 0 78%;
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
-
-.hero-slide img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
