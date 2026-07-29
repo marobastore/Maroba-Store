@@ -290,7 +290,7 @@ img{
 
     height:100%;
 
-    transform:translateX(-38%);
+    transform:translateX(calc(-78% - 30px));
 
     transition:transform .6s ease;
 
