@@ -307,24 +307,6 @@ img{
 
 }
 
-.hero-slide.active{
-
-    transform:translateX(0);
-
-}
-
-.hero-slide.prev{
-
-    transform:translateX(-90%);
-
-}
-
-.hero-slide.next{
-
-    transform:translateX(90%);
-
-}
-
 
 .hero-slide img{
 
