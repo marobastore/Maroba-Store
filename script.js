@@ -88,22 +88,22 @@ selectedColor.textContent = nombreColor;
 }
 
 document.querySelectorAll(".color-dot").forEach(btn => {
-btn.classList.remove("active");
+btn;
 });
 
 document.querySelectorAll(".amazon-thumb").forEach(btn => {
-btn.classList.remove("active");
+btn;
 });
 
 if (elemento) {
-elemento.classList.add("active");
+elemento.;
 }
 
 const botonesColor = document.querySelectorAll(".color-dot");
 botonesColor.forEach(btn => {
 const onclick = btn.getAttribute("onclick");
 if (onclick && onclick.includes(nombreColor)) {
-btn.classList.add("active");
+btn.;
 }
 });
 
@@ -111,7 +111,7 @@ const miniaturas = document.querySelectorAll(".amazon-thumb");
 miniaturas.forEach(btn => {
 const onclick = btn.getAttribute("onclick");
 if (onclick && onclick.includes(nombreColor)) {
-btn.classList.add("active");
+btn.;
 }
 });
 
