@@ -276,30 +276,29 @@ img{
 
     margin:30px auto;
 
-    position:relative;
-
     overflow:hidden;
 
-    border-radius:50px;
+    position:relative;
 
 }
 
+.hero-track{
 
-.hero-slide{
+    display:flex;
 
-    position:absolute;
-
-    width:80%;
+    gap:30px;
 
     height:100%;
 
-    top:0;
-
-    left:0;
-
-    transform:translateX(100%);
-
     transition:transform .6s ease;
+
+}
+
+.hero-slide{
+
+    flex:0 0 80%;
+
+    height:100%;
 
     border-radius:50px;
 
