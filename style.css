@@ -276,9 +276,9 @@ img{
 
     margin:30px auto;
 
-    overflow:hidden;
-
     position:relative;
+
+    overflow:visible;
 
 }
 
@@ -321,17 +321,7 @@ img{
 
 .hero-slide::after{
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        90deg,
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.15)
-    );
+    content:none;
 
 }
 
