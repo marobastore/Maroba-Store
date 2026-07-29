@@ -73,49 +73,50 @@ selectedColor.textContent = nombreColor;
 }
 
 function fijarProductoSilicona(nombreColor, imagen, elemento) {
-const mainImage = document.getElementById("mainProductImage");
-const selectedColor = document.getElementById("selectedColor");
+  const mainImage = document.getElementById("mainProductImage");
+  const selectedColor = document.getElementById("selectedColor");
 
-colorFundaSeleccionado = nombreColor;
+  colorFundaSeleccionado = nombreColor;
 
-if (mainImage) {
-mainImage.src = imagen;
-mainImage.alt = "Funda de silicona iPhone 17 Pro color " + nombreColor;
-}
+  if (mainImage) {
+    mainImage.src = imagen;
+    mainImage.alt =
+      "Funda de silicona iPhone 17 Pro color " + nombreColor;
+  }
 
-if (selectedColor) {
-selectedColor.textContent = nombreColor;
-}
+  if (selectedColor) {
+    selectedColor.textContent = nombreColor;
+  }
 
-document.querySelectorAll(".color-dot").forEach(btn => {
-btn;
-});
+  document.querySelectorAll(".color-dot").forEach((btn) => {
+    btn.classList.remove("active");
+  });
 
-document.querySelectorAll(".amazon-thumb").forEach(btn => {
-btn;
-});
+  document.querySelectorAll(".amazon-thumb").forEach((btn) => {
+    btn.classList.remove("active");
+  });
 
-if (elemento) {
-elemento.;
-}
+  if (elemento) {
+    elemento.classList.add("active");
+  }
 
-const botonesColor = document.querySelectorAll(".color-dot");
-botonesColor.forEach(btn => {
-const onclick = btn.getAttribute("onclick");
-if (onclick && onclick.includes(nombreColor)) {
-btn.;
-}
-});
+  document.querySelectorAll(".color-dot").forEach((btn) => {
+    const onclick = btn.getAttribute("onclick");
 
-const miniaturas = document.querySelectorAll(".amazon-thumb");
-miniaturas.forEach(btn => {
-const onclick = btn.getAttribute("onclick");
-if (onclick && onclick.includes(nombreColor)) {
-btn.;
-}
-});
+    if (onclick && onclick.includes(nombreColor)) {
+      btn.classList.add("active");
+    }
+  });
 
-actualizarWhatsappSilicona();
+  document.querySelectorAll(".amazon-thumb").forEach((btn) => {
+    const onclick = btn.getAttribute("onclick");
+
+    if (onclick && onclick.includes(nombreColor)) {
+      btn.classList.add("active");
+    }
+  });
+
+  actualizarWhatsappSilicona();
 }
 
 function seleccionarColorIphone(nombreColor, elemento) {
@@ -260,3 +261,156 @@ const mensaje = `Hola, quiero comprar la Funda gamuzada para iPhone en color ${n
 whatsappButton.href = `https://wa.me/59164465212?text=${encodeURIComponent(mensaje)}`;
 }
 }
+/* =========================
+   CARRUSEL PRINCIPAL
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".hero-slider");
+  const track = document.querySelector(".hero-track");
+
+  if (!slider || !track) return;
+
+  let animando = false;
+  let intervaloCarrusel = null;
+
+  function obtenerSlides() {
+    return Array.from(track.querySelectorAll(".hero-slide"));
+  }
+
+  function desplazamientoParaCentrar(slide) {
+    const centroSlider = slider.clientWidth / 2;
+    const centroSlide = slide.offsetLeft + slide.offsetWidth / 2;
+
+    return centroSlider - centroSlide;
+  }
+
+  function centrarSlideMedio(sinAnimacion = false) {
+    const slides = obtenerSlides();
+    const slideMedio = slides[1];
+
+    if (!slideMedio) return;
+
+    track.style.transition = sinAnimacion
+      ? "none"
+      : "transform 0.65s ease";
+
+    const desplazamiento = desplazamientoParaCentrar(slideMedio);
+
+    track.style.transform =
+      `translate3d(${desplazamiento}px, 0, 0)`;
+  }
+
+  function moverCarruselDerecha() {
+    if (animando) return;
+
+    const slides = obtenerSlides();
+    const slideIzquierdo = slides[0];
+
+    if (!slideIzquierdo) return;
+
+    animando = true;
+    track.style.transition = "transform 0.65s ease";
+
+    const desplazamiento =
+      desplazamientoParaCentrar(slideIzquierdo);
+
+    track.style.transform =
+      `translate3d(${desplazamiento}px, 0, 0)`;
+
+    track.addEventListener(
+      "transitionend",
+      () => {
+        const slidesActuales = obtenerSlides();
+        const ultimoSlide =
+          slidesActuales[slidesActuales.length - 1];
+
+        track.prepend(ultimoSlide);
+
+        centrarSlideMedio(true);
+
+        requestAnimationFrame(() => {
+          track.style.transition = "transform 0.65s ease";
+          animando = false;
+        });
+      },
+      { once: true }
+    );
+  }
+
+  function moverCarruselIzquierda() {
+    if (animando) return;
+
+    const slides = obtenerSlides();
+    const slideDerecho = slides[2];
+
+    if (!slideDerecho) return;
+
+    animando = true;
+    track.style.transition = "transform 0.65s ease";
+
+    const desplazamiento =
+      desplazamientoParaCentrar(slideDerecho);
+
+    track.style.transform =
+      `translate3d(${desplazamiento}px, 0, 0)`;
+
+    track.addEventListener(
+      "transitionend",
+      () => {
+        const primerSlide = obtenerSlides()[0];
+
+        track.append(primerSlide);
+
+        centrarSlideMedio(true);
+
+        requestAnimationFrame(() => {
+          track.style.transition = "transform 0.65s ease";
+          animando = false;
+        });
+      },
+      { once: true }
+    );
+  }
+
+  function iniciarMovimientoAutomatico() {
+    clearInterval(intervaloCarrusel);
+
+    intervaloCarrusel = setInterval(() => {
+      moverCarruselDerecha();
+    }, 4000);
+  }
+
+  const botonAnterior =
+    document.querySelector(".prev-arrow");
+
+  const botonSiguiente =
+    document.querySelector(".next-arrow");
+
+  botonAnterior?.addEventListener("click", () => {
+    moverCarruselDerecha();
+    iniciarMovimientoAutomatico();
+  });
+
+  botonSiguiente?.addEventListener("click", () => {
+    moverCarruselIzquierda();
+    iniciarMovimientoAutomatico();
+  });
+
+  slider.addEventListener("mouseenter", () => {
+    clearInterval(intervaloCarrusel);
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    iniciarMovimientoAutomatico();
+  });
+
+  window.addEventListener("resize", () => {
+    centrarSlideMedio(true);
+  });
+
+  requestAnimationFrame(() => {
+    centrarSlideMedio(true);
+    iniciarMovimientoAutomatico();
+  });
+});
