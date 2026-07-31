@@ -262,6 +262,149 @@ whatsappButton.href = `https://wa.me/59164465212?text=${encodeURIComponent(mensa
 }
 }
 /* =========================
+   MENÚ DE CATEGORÍAS
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryDropdown =
+    document.querySelector(".category-dropdown");
+
+  const categoryTrigger =
+    document.getElementById("categoryDropdownTrigger");
+
+  const categoryMenu =
+    document.getElementById("categoryDropdownMenu");
+
+  const categoryCurrent =
+    document.getElementById("categoryCurrent");
+
+  const categoryFilter =
+    document.getElementById("categoryFilter");
+
+  const categoryOptions =
+    document.querySelectorAll(".category-dropdown-option");
+
+
+  if (
+    !categoryDropdown ||
+    !categoryTrigger ||
+    !categoryMenu
+  ) {
+    return;
+  }
+
+
+  function abrirMenuCategorias() {
+    categoryDropdown.classList.add("is-open");
+
+    categoryTrigger.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+  }
+
+
+  function cerrarMenuCategorias() {
+    categoryDropdown.classList.remove("is-open");
+
+    categoryTrigger.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+  }
+
+
+  function alternarMenuCategorias() {
+    const estaAbierto =
+      categoryDropdown.classList.contains("is-open");
+
+    if (estaAbierto) {
+      cerrarMenuCategorias();
+    } else {
+      abrirMenuCategorias();
+    }
+  }
+
+
+  /* Abrir y cerrar al tocar Categorías o la flecha */
+
+  categoryTrigger.addEventListener(
+    "click",
+    alternarMenuCategorias
+  );
+
+
+  /* Elegir una categoría */
+
+  categoryOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      const categoria = option.dataset.category;
+
+      if (!categoria) return;
+
+
+      /* Cambia el texto visible */
+
+      if (categoryCurrent) {
+        categoryCurrent.textContent = categoria;
+      }
+
+
+      /* Actualiza el select interno */
+
+      if (categoryFilter) {
+        categoryFilter.value = categoria;
+
+        categoryFilter.dispatchEvent(
+          new Event("change", {
+            bubbles: true
+          })
+        );
+      }
+
+
+      /* Marca visualmente la opción elegida */
+
+      categoryOptions.forEach((item) => {
+        item.classList.remove("active");
+        item.setAttribute(
+          "aria-selected",
+          "false"
+        );
+      });
+
+      option.classList.add("active");
+
+      option.setAttribute(
+        "aria-selected",
+        "true"
+      );
+
+
+      cerrarMenuCategorias();
+    });
+  });
+
+
+  /* Cerrar si se hace clic fuera del menú */
+
+  document.addEventListener("click", (event) => {
+    if (!categoryDropdown.contains(event.target)) {
+      cerrarMenuCategorias();
+    }
+  });
+
+
+  /* Cerrar con la tecla Escape */
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      cerrarMenuCategorias();
+      categoryTrigger.focus();
+    }
+  });
+});
+/* =========================
    CARRUSEL PRINCIPAL
 ========================= */
 
