@@ -1366,3 +1366,78 @@ actualmente y dibuja correctamente la lupa.
   }
 
 }
+/* =========================================
+   UN SOLO BORDE AL ENFOCAR EL BUSCADOR
+========================================= */
+
+/* El único contorno permitido es el exterior */
+
+.search-container {
+  border: 2px solid transparent;
+  border-radius: 999px;
+}
+
+.search-container:focus-within {
+  border-color: #13b8e5;
+  border-radius: 999px;
+
+  box-shadow:
+    0 0 0 3px rgba(19, 184, 229, 0.12);
+}
+
+
+/* Elimina cualquier borde del contenedor interior */
+
+.search-container .search-box,
+.search-container .search-box:hover,
+.search-container .search-box:focus,
+.search-container .search-box:focus-visible,
+.search-container .search-box:focus-within {
+  background: transparent !important;
+
+  border: 0 !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+
+  outline: 0 !important;
+  outline-offset: 0 !important;
+
+  box-shadow: none !important;
+}
+
+
+/* Elimina cualquier borde propio del input */
+
+.search-container .search-box input,
+.search-container .search-box input:hover,
+.search-container .search-box input:active,
+.search-container .search-box input:focus,
+.search-container .search-box input:focus-visible {
+  background: transparent !important;
+
+  border: 0 !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+
+  outline: 0 !important;
+  outline-offset: 0 !important;
+
+  box-shadow: none !important;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+
+/* Evita un posible contorno interno en Chrome/Safari */
+
+.search-container input[type="search"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.search-container input[type="search"]::-webkit-search-decoration,
+.search-container input[type="search"]::-webkit-search-cancel-button,
+.search-container input[type="search"]::-webkit-search-results-button,
+.search-container input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
