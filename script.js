@@ -342,13 +342,34 @@ function moverCarruselIzquierda() {
   if (animando) return;
 
   const slides = obtenerSlides();
-  const slideDerecho = slides[2];
 
-  if (!slideDerecho) return;
+  if (slides.length < 3) return;
+
+  const primerSlide = slides[0];
+  const slideDerecho = slides[2];
 
   animando = true;
 
-  const terminarTransicion = (evento) => {
+  /*
+   * Creamos una copia temporal del banner izquierdo
+   * y la ponemos a la derecha ANTES de mover el carrusel.
+   * Así nunca queda un espacio vacío.
+   */
+  const clonPrimerSlide = primerSlide.cloneNode(true);
+
+  clonPrimerSlide.setAttribute("aria-hidden", "true");
+
+  track.appendChild(clonPrimerSlide);
+
+  /*
+   * Forzamos al navegador a reconocer el clon
+   * antes de comenzar la animación.
+   */
+  track.style.transition = "none";
+  void track.offsetWidth;
+
+
+  function terminarTransicion(evento) {
     if (
       evento.target !== track ||
       evento.propertyName !== "transform"
@@ -361,31 +382,70 @@ function moverCarruselIzquierda() {
       terminarTransicion
     );
 
-    finalizarMovimiento(() => {
-      /*
-       * El banner que salió por la izquierda
-       * pasa al extremo derecho.
-       */
-      const primerSlide = obtenerSlides()[0];
+    /*
+     * Desactivamos la transición para hacer
+     * el reordenamiento sin que sea visible.
+     */
+    track.style.transition = "none";
 
-      if (primerSlide) {
-        track.appendChild(primerSlide);
-      }
+    /*
+     * Movemos el banner original al final.
+     */
+    track.appendChild(primerSlide);
+
+    /*
+     * Quitamos la copia temporal.
+     */
+    clonPrimerSlide.remove();
+
+    /*
+     * Después del reordenamiento, el banner central
+     * vuelve a ser el elemento número 2.
+     */
+    const slideMedio = obtenerSlides()[1];
+
+    if (slideMedio) {
+      const desplazamiento =
+        desplazamientoParaCentrar(slideMedio);
+
+      track.style.transform =
+        `translate3d(${desplazamiento}px, 0, 0)`;
+    }
+
+    /*
+     * Aplicamos inmediatamente la nueva posición.
+     */
+    void track.offsetWidth;
+
+    requestAnimationFrame(() => {
+      track.style.transition =
+        "transform 0.65s ease";
+
+      animando = false;
     });
-  };
+  }
+
 
   track.addEventListener(
     "transitionend",
     terminarTransicion
   );
 
-  track.style.transition = "transform 0.65s ease";
 
-  const desplazamiento =
-    desplazamientoParaCentrar(slideDerecho);
+  /*
+   * Iniciamos la animación recién cuando la copia
+   * temporal ya se encuentra colocada a la derecha.
+   */
+  requestAnimationFrame(() => {
+    track.style.transition =
+      "transform 0.65s ease";
 
-  track.style.transform =
-    `translate3d(${desplazamiento}px, 0, 0)`;
+    const desplazamiento =
+      desplazamientoParaCentrar(slideDerecho);
+
+    track.style.transform =
+      `translate3d(${desplazamiento}px, 0, 0)`;
+  });
 }
 
 
