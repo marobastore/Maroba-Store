@@ -923,52 +923,6 @@ Instagram · TikTok · Facebook
 
 <script src="script.js"></script>
 
-
-<script>
-
-
-let currentSlide = 0;
-
-
-const slides = document.querySelectorAll(".hero-slide");
-
-
-
-function changeSlide(){
-
-
-slides.forEach(slide => {
-
-slide.classList.remove("active");
-
-});
-
-
-currentSlide++;
-
-
-if(currentSlide >= slides.length){
-
-currentSlide = 0;
-
-}
-
-
-slides[currentSlide].classList.add("active");
-
-
-}
-
-
-
-setInterval(changeSlide,4000);
-
-
-
-</script>
-
-
-
 </body>
 
 </html>
