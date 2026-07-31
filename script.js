@@ -374,12 +374,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function iniciarMovimientoAutomatico() {
-    clearInterval(intervaloCarrusel);
+  clearInterval(intervaloCarrusel);
 
-    intervaloCarrusel = setInterval(() => {
-      moverCarruselDerecha();
-    }, 4000);
-  }
+  intervaloCarrusel = setInterval(() => {
+    moverCarruselIzquierda();
+  }, 4000);
+}
 
   const botonAnterior =
     document.querySelector(".prev-arrow");
