@@ -908,9 +908,14 @@ img{
     font-size:32px;
 
 }
+
+/* CIERRA EL @media(max-width:600px) */
+}
+
 /* =========================================
    NUEVO BUSCADOR MAROBA
 ========================================= */
+
 
 :root {
   --maroba-celeste: #13b8e5;
@@ -940,6 +945,8 @@ img{
 
   border: 2px solid transparent;
   border-radius: 999px;
+
+  overflow: visible;
 
   box-sizing: border-box;
 
@@ -1357,8 +1364,5 @@ actualmente y dibuja correctamente la lupa.
 
     width: 215px;
   }
-
-}
-
 
 }
