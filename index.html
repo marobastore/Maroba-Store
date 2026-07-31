@@ -47,65 +47,174 @@ alt="Maroba Store"
 
 <div class="search-container">
 
+  <!-- SELECTOR PERSONALIZADO DE CATEGORÍAS -->
 
-<div class="category-select">
+  <div class="category-dropdown">
 
-<span>
-Categorías
-</span>
+    <button
+      type="button"
+      class="category-dropdown-trigger"
+      id="categoryDropdownTrigger"
+      aria-expanded="false"
+      aria-controls="categoryDropdownMenu"
+    >
 
-<select>
+      <span class="category-title">
+        Categorías
+      </span>
 
-<option>
-Todos
-</option>
+      <span
+        class="category-current"
+        id="categoryCurrent"
+      >
+        Todos
+      </span>
 
-<option>
-Fundas
-</option>
+      <span
+        class="category-dropdown-arrow"
+        aria-hidden="true"
+      >
+        ▾
+      </span>
 
-<option>
-Cables
-</option>
+    </button>
 
-<option>
-Cargadores
-</option>
 
-<option>
-Audio
-</option>
+    <div
+      class="category-dropdown-menu"
+      id="categoryDropdownMenu"
+      role="listbox"
+    >
 
-</select>
+      <button
+        type="button"
+        class="category-dropdown-option active"
+        data-category="Todos"
+        role="option"
+        aria-selected="true"
+      >
+        <span class="category-option-arrow">›</span>
+        <span>Todos</span>
+      </button>
 
+
+      <button
+        type="button"
+        class="category-dropdown-option"
+        data-category="Fundas"
+        role="option"
+        aria-selected="false"
+      >
+        <span class="category-option-arrow">›</span>
+        <span>Fundas</span>
+      </button>
+
+
+      <button
+        type="button"
+        class="category-dropdown-option"
+        data-category="Cables"
+        role="option"
+        aria-selected="false"
+      >
+        <span class="category-option-arrow">›</span>
+        <span>Cables</span>
+      </button>
+
+
+      <button
+        type="button"
+        class="category-dropdown-option"
+        data-category="Cargadores"
+        role="option"
+        aria-selected="false"
+      >
+        <span class="category-option-arrow">›</span>
+        <span>Cargadores</span>
+      </button>
+
+
+      <button
+        type="button"
+        class="category-dropdown-option"
+        data-category="Audio"
+        role="option"
+        aria-selected="false"
+      >
+        <span class="category-option-arrow">›</span>
+        <span>Audio</span>
+      </button>
+
+    </div>
+
+
+    <!-- SELECT INTERNO PARA CONSERVAR EL VALOR ELEGIDO -->
+
+    <select
+      id="categoryFilter"
+      class="category-native-select"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <option value="Todos">Todos</option>
+      <option value="Fundas">Fundas</option>
+      <option value="Cables">Cables</option>
+      <option value="Cargadores">Cargadores</option>
+      <option value="Audio">Audio</option>
+    </select>
+
+  </div>
+
+
+  <!-- SEPARADOR ENTRE CATEGORÍAS Y BUSCADOR -->
+
+  <span
+    class="search-separator"
+    aria-hidden="true"
+  ></span>
+
+
+  <!-- CAMPO DE BÚSQUEDA -->
+
+  <div class="search-box">
+
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Buscar productos en Maroba Store..."
+      autocomplete="off"
+      aria-label="Buscar productos"
+    >
+
+
+    <button
+      type="button"
+      class="search-icon"
+      id="searchButton"
+      onclick="buscarProducto()"
+      aria-label="Buscar producto"
+    >
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <circle
+          cx="11"
+          cy="11"
+          r="7"
+        ></circle>
+
+        <path
+          d="M16.5 16.5L21 21"
+        ></path>
+      </svg>
+
+    </button>
+
+  </div>
 
 </div>
-
-
-
-<div class="search-box">
-
-
-<input 
-type="text"
-id="searchInput"
-placeholder="Buscar productos en Maroba Store..."
->
-
-
-<button 
-onclick="buscarProducto()"
-class="search-icon"
->
-🔍
-</button>
-
-
-</div>
-
-
-</div>
-
 
 
 
