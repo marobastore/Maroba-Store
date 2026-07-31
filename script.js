@@ -301,77 +301,145 @@ document.addEventListener("DOMContentLoaded", () => {
       `translate3d(${desplazamiento}px, 0, 0)`;
   }
 
-  function moverCarruselDerecha() {
-    if (animando) return;
+  function finalizarMovimiento(reordenarSlides) {
+  /*
+   * Muy importante:
+   * desactivamos la transición ANTES de modificar
+   * el orden de los banners.
+   */
+  track.style.transition = "none";
 
-    const slides = obtenerSlides();
-    const slideIzquierdo = slides[0];
+  reordenarSlides();
 
-    if (!slideIzquierdo) return;
+  /*
+   * Después del reordenamiento, el banner que debe
+   * permanecer visible está nuevamente en el medio.
+   */
+  const slideMedio = obtenerSlides()[1];
 
-    animando = true;
-    track.style.transition = "transform 0.65s ease";
-
+  if (slideMedio) {
     const desplazamiento =
-      desplazamientoParaCentrar(slideIzquierdo);
+      desplazamientoParaCentrar(slideMedio);
 
     track.style.transform =
       `translate3d(${desplazamiento}px, 0, 0)`;
+  }
 
-    track.addEventListener(
+  /*
+   * Fuerza al navegador a aplicar inmediatamente
+   * el cambio sin animación.
+   */
+  void track.offsetWidth;
+
+  requestAnimationFrame(() => {
+    track.style.transition = "transform 0.65s ease";
+    animando = false;
+  });
+}
+
+
+function moverCarruselIzquierda() {
+  if (animando) return;
+
+  const slides = obtenerSlides();
+  const slideDerecho = slides[2];
+
+  if (!slideDerecho) return;
+
+  animando = true;
+
+  const terminarTransicion = (evento) => {
+    if (
+      evento.target !== track ||
+      evento.propertyName !== "transform"
+    ) {
+      return;
+    }
+
+    track.removeEventListener(
       "transitionend",
-      () => {
-        const slidesActuales = obtenerSlides();
-        const ultimoSlide =
-          slidesActuales[slidesActuales.length - 1];
+      terminarTransicion
+    );
 
+    finalizarMovimiento(() => {
+      /*
+       * El banner que salió por la izquierda
+       * pasa al extremo derecho.
+       */
+      const primerSlide = obtenerSlides()[0];
+
+      if (primerSlide) {
+        track.appendChild(primerSlide);
+      }
+    });
+  };
+
+  track.addEventListener(
+    "transitionend",
+    terminarTransicion
+  );
+
+  track.style.transition = "transform 0.65s ease";
+
+  const desplazamiento =
+    desplazamientoParaCentrar(slideDerecho);
+
+  track.style.transform =
+    `translate3d(${desplazamiento}px, 0, 0)`;
+}
+
+
+function moverCarruselDerecha() {
+  if (animando) return;
+
+  const slides = obtenerSlides();
+  const slideIzquierdo = slides[0];
+
+  if (!slideIzquierdo) return;
+
+  animando = true;
+
+  const terminarTransicion = (evento) => {
+    if (
+      evento.target !== track ||
+      evento.propertyName !== "transform"
+    ) {
+      return;
+    }
+
+    track.removeEventListener(
+      "transitionend",
+      terminarTransicion
+    );
+
+    finalizarMovimiento(() => {
+      /*
+       * El banner que salió por la derecha
+       * pasa al extremo izquierdo.
+       */
+      const slidesActuales = obtenerSlides();
+      const ultimoSlide =
+        slidesActuales[slidesActuales.length - 1];
+
+      if (ultimoSlide) {
         track.prepend(ultimoSlide);
+      }
+    });
+  };
 
-        centrarSlideMedio(true);
+  track.addEventListener(
+    "transitionend",
+    terminarTransicion
+  );
 
-        requestAnimationFrame(() => {
-          track.style.transition = "transform 0.65s ease";
-          animando = false;
-        });
-      },
-      { once: true }
-    );
-  }
+  track.style.transition = "transform 0.65s ease";
 
-  function moverCarruselIzquierda() {
-    if (animando) return;
+  const desplazamiento =
+    desplazamientoParaCentrar(slideIzquierdo);
 
-    const slides = obtenerSlides();
-    const slideDerecho = slides[2];
-
-    if (!slideDerecho) return;
-
-    animando = true;
-    track.style.transition = "transform 0.65s ease";
-
-    const desplazamiento =
-      desplazamientoParaCentrar(slideDerecho);
-
-    track.style.transform =
-      `translate3d(${desplazamiento}px, 0, 0)`;
-
-    track.addEventListener(
-      "transitionend",
-      () => {
-        const primerSlide = obtenerSlides()[0];
-
-        track.append(primerSlide);
-
-        centrarSlideMedio(true);
-
-        requestAnimationFrame(() => {
-          track.style.transition = "transform 0.65s ease";
-          animando = false;
-        });
-      },
-      { once: true }
-    );
-  }
+  track.style.transform =
+    `translate3d(${desplazamiento}px, 0, 0)`;
+}
 
   function iniciarMovimientoAutomatico() {
   clearInterval(intervaloCarrusel);
