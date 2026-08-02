@@ -1441,3 +1441,192 @@ actualmente y dibuja correctamente la lupa.
 .search-container input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
+/* =========================================
+   CATEGORÍAS RÁPIDAS DEBAJO DEL BANNER
+========================================= */
+
+.quick-categories {
+  width: 100%;
+
+  padding: 28px 38px 34px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+.quick-categories-track {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(120px, 1fr));
+
+  align-items: start;
+
+  gap: 32px;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+}
+
+
+/* Cada categoría */
+
+.quick-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #171c21;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+/* Círculo celeste */
+
+.quick-category-image {
+  display: grid;
+  place-items: center;
+
+  width: 84px;
+  height: 84px;
+
+  background: #e3f4ff;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* Imagen dentro del círculo */
+
+.quick-category-image img {
+  display: block;
+
+  width: 68%;
+  height: 68%;
+
+  object-fit: contain;
+}
+
+
+/* Nombre */
+
+.quick-category-name {
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.quick-category:hover .quick-category-image {
+  background: #d1effc;
+
+  transform: translateY(-4px) scale(1.04);
+
+  box-shadow:
+    0 9px 20px rgba(22, 173, 221, 0.18);
+}
+
+
+.quick-category:hover .quick-category-name {
+  color: #13aeda;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .quick-categories {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .quick-categories-track {
+    gap: 20px;
+  }
+
+
+  .quick-category-image {
+    width: 76px;
+    height: 76px;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR: FILA DESLIZABLE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .quick-categories {
+    padding: 22px 0 26px;
+  }
+
+
+  .quick-categories-track {
+    display: flex;
+
+    width: 100%;
+    max-width: none;
+
+    gap: 18px;
+
+    padding: 0 18px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+
+  .quick-categories-track::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .quick-category {
+    flex: 0 0 88px;
+
+    scroll-snap-align: start;
+  }
+
+
+  .quick-category-image {
+    width: 72px;
+    height: 72px;
+  }
+
+
+  .quick-category-name {
+    font-size: 13px;
+  }
+
+}
