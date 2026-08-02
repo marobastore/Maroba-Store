@@ -1516,12 +1516,12 @@ actualmente y dibuja correctamente la lupa.
 .quick-category-image img {
   display: block;
 
-  width: 68%;
-  height: 68%;
+  width: 100%;
+  height: 100%;
 
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
 }
-
 
 /* Nombre */
 
