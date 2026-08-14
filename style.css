@@ -1630,3 +1630,22 @@ actualmente y dibuja correctamente la lupa.
   }
 
 }
+/* ====================================
+   Ajuste Círculos de Categorías
+==================================== */
+section a span:first-child {
+  width: 110px !important;
+  height: 110px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px auto;
+}
+
+section a span:first-child img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
